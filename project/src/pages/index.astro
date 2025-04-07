@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Portfolio - Your Name">
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 px-4">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+            Hi, I'm <span class="text-primary">Your Name</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8">
+            A passionate developer focused on creating innovative solutions and delivering exceptional user experiences.
+          </p>
+          <div class="flex gap-4">
+            <a 
+              href="/contact" 
+              class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors"
+            >
+              Contact Me
+            </a>
+            <a 
+              href="#projects" 
+              class="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors"
+            >
+              View Projects
+            </a>
+          </div>
+        </div>
+        <div 
+          class="relative"
+          data-aos="fade-left"
+        >
+          <!-- Replace with your professional photo -->
+          <div class="w-full h-[400px] bg-gray-200 rounded-lg">
+            <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-500">
+              Your Photo Here
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div 
+          class="bg-white p-6 rounded-lg shadow-sm"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript / TypeScript</li>
+            <li>React.js</li>
+            <li>Vue.js</li>
+          </ul>
+        </div>
+        
+        <div 
+          class="bg-white p-6 rounded-lg shadow-sm"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>SQL & NoSQL Databases</li>
+          </ul>
+        </div>
+        
+        <div 
+          class="bg-white p-6 rounded-lg shadow-sm"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <h3 class="text-xl font-semibold mb-4">Other Skills</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>Git & Version Control</li>
+            <li>CI/CD</li>
+            <li>Docker</li>
+            <li>Agile Methodologies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section id="projects" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project Card 1 -->
+        <div 
+          class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100"
+          data-aos="fade-up"
+        >
+          <div class="h-48 bg-gray-200"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Project Name</h3>
+            <p class="text-gray-600 mb-4">
+              Brief description of the project and your role in it.
+            </p>
+            <a 
+              href="#" 
+              class="text-primary hover:text-secondary transition-colors"
+            >
+              Learn More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div 
+          class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="h-48 bg-gray-200"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Project Name</h3>
+            <p class="text-gray-600 mb-4">
+              Brief description of the project and your role in it.
+            </p>
+            <a 
+              href="#" 
+              class="text-primary hover:text-secondary transition-colors"
+            >
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
