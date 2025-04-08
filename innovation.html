@@ -4,119 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovation Routes | My Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Portfolio</div>
-            <nav>
-                <button class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="seminars.html">Seminars</a></li>
-                    <li><a href="innovation.html" class="active">Innovation Routes</a></li>
-                    <li><a href="hackathon.html">Hackathons</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="page-header">
-            <div class="container">
+    <div class="container">
+        <header>
+            <div class="header-content">
                 <h1>Innovation Routes</h1>
-                <p>Exploring new paths and innovative solutions</p>
+                <div class="blink-text">// Exploring New Frontiers //</div>
             </div>
-        </section>
-
-        <section class="innovation-routes">
-            <div class="container">
-                <div class="innovation-grid">
-                    <div class="innovation-card">
-                        <div class="innovation-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
-                        <h3>AI-Powered User Experience</h3>
-                        <p>Exploring how artificial intelligence can enhance user experiences by providing personalized content and interactions.</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="seminars.html">Seminars</a></li>
+                <li class="active"><a href="innovation.html">Innovation Routes</a></li>
+                <li><a href="hackathon.html">Hackathons</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section class="intro">
+                <h2>My Innovation Journey</h2>
+                <p>Exploring innovative approaches and technologies has been a core part of my professional development. Here are some of the innovation routes I've pursued.</p>
+            </section>
+            
+            <section class="innovation-projects">
+                <div class="innovation-card">
+                    <h3>AI-Powered Code Assistant</h3>
+                    <div class="innovation-content">
+                        <p>Developed a machine learning model to assist developers with code completion and bug detection, improving productivity by 30%.</p>
                         <div class="innovation-details">
-                            <h4>Key Achievements:</h4>
-                            <ul>
-                                <li>Developed a prototype recommendation system</li>
-                                <li>Implemented natural language processing for user queries</li>
-                                <li>Created an adaptive interface that learns from user behavior</li>
-                            </ul>
-                            <h4>Technologies Used:</h4>
-                            <div class="tech-tags">
-                                <span>Machine Learning</span>
-                                <span>NLP</span>
-                                <span>JavaScript</span>
-                                <span>Python</span>
+                            <div class="detail-item">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">6 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Team Size:</span>
+                                <span class="detail-value">4 developers</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Technologies:</span>
+                                <span class="detail-value">Python, TensorFlow, NLP</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="innovation-card">
-                        <div class="innovation-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                        </div>
-                        <h3>Sustainable Web Development</h3>
-                        <p>Researching and implementing eco-friendly web development practices to reduce carbon footprint while maintaining performance.</p>
-                        <div class="innovation-details">
-                            <h4>Key Achievements:</h4>
-                            <ul>
-                                <li>Reduced page load size by 60% through optimization</li>
-                                <li>Implemented energy-efficient hosting solutions</li>
-                                <li>Created guidelines for sustainable web development</li>
-                            </ul>
-                            <h4>Technologies Used:</h4>
-                            <div class="tech-tags">
-                                <span>Green Hosting</span>
-                                <span>Performance Optimization</span>
-                                <span>Static Site Generation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="innovation-card">
-                        <div class="innovation-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                        </div>
-                        <h3>Accessible Web Applications</h3>
-                        <p>Developing innovative approaches to make web applications more accessible to users with disabilities.</p>
-                        <div class="innovation-details">
-                            <h4>Key Achievements:</h4>
-                            <ul>
-                                <li>Created a voice-controlled navigation system</li>
-                                <li>Implemented advanced screen reader compatibility</li>
-                                <li>Developed an accessibility testing framework</li>
-                            </ul>
-                            <h4>Technologies Used:</h4>
-                            <div class="tech-tags">
-                                <span>ARIA</span>
-                                <span>Speech Recognition</span>
-                                <span>Semantic HTML</span>
-                                <span>JavaScript</span>
-                            </div>
+                        <div class="button-container">
+                            <button class="retro-button">View Details</button>
                         </div>
                     </div>
                 </div>
+                
+                <div class="innovation-card">
+                    <h3>Blockchain for Supply Chain</h3>
+                    <div class="innovation-content">
+                        <p>Implemented a blockchain solution to enhance transparency and traceability in supply chain management for a manufacturing client.</p>
+                        <div class="innovation-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">8 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Team Size:</span>
+                                <span class="detail-value">6 developers</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Technologies:</span>
+                                <span class="detail-value">Ethereum, Solidity, Web3.js</span>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="retro-button">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="innovation-card">
+                    <h3>IoT Smart Home System</h3>
+                    <div class="innovation-content">
+                        <p>Designed and built a prototype smart home system using IoT devices to optimize energy consumption and enhance security.</p>
+                        <div class="innovation-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">4 months</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Team Size:</span>
+                                <span class="detail-value">3 developers</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Technologies:</span>
+                                <span class="detail-value">Arduino, Raspberry Pi, MQTT</span>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="retro-button">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="innovation-approach">
+                <h2>My Innovation Approach</h2>
+                <div class="approach-steps">
+                    <div class="approach-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Identify Problems</h3>
+                            <p>Carefully analyze challenges and identify opportunities for innovation.</p>
+                        </div>
+                    </div>
+                    <div class="approach-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Research & Ideate</h3>
+                            <p>Conduct thorough research and brainstorm potential solutions.</p>
+                        </div>
+                    </div>
+                    <div class="approach-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Prototype & Test</h3>
+                            <p>Develop rapid prototypes and iterate based on testing feedback.</p>
+                        </div>
+                    </div>
+                    <div class="approach-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Implement & Scale</h3>
+                            <p>Deploy successful solutions and scale them for broader impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="visitor-counter">
+                <span>Visitor count: </span>
+                <span id="counter">12345</span>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="scripts/main.js"></script>
+            <p>&copy; 2024 Your Name | <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p class="footer-note">Best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
-

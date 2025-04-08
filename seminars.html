@@ -4,127 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seminars | My Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Portfolio</div>
-            <nav>
-                <button class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="seminars.html" class="active">Seminars</a></li>
-                    <li><a href="innovation.html">Innovation Routes</a></li>
-                    <li><a href="hackathon.html">Hackathons</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Seminars</h1>
-                <p>A collection of seminars I've attended and presented</p>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Seminars & Presentations</h1>
+                <div class="blink-text">// Knowledge Sharing //</div>
             </div>
-        </section>
-
-        <section class="seminars">
-            <div class="container">
-                <div class="seminar-list">
-                    <div class="seminar-card">
-                        <div class="seminar-date">
-                            <span class="month">JAN</span>
-                            <span class="year">2025</span>
-                        </div>
-                        <div class="seminar-content">
-                            <h3>Web Development Best Practices</h3>
-                            <p class="seminar-role">Presenter</p>
-                            <p class="seminar-description">
-                                A comprehensive overview of modern web development practices, focusing on performance optimization and accessibility.
-                            </p>
-                            <div class="seminar-tags">
-                                <span>Web Development</span>
-                                <span>Performance</span>
-                                <span>Accessibility</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seminar-card">
-                        <div class="seminar-date">
-                            <span class="month">NOV</span>
-                            <span class="year">2024</span>
-                        </div>
-                        <div class="seminar-content">
-                            <h3>The Future of AI in Web Applications</h3>
-                            <p class="seminar-role">Attendee</p>
-                            <p class="seminar-description">
-                                An insightful seminar exploring how artificial intelligence is transforming web applications and user experiences.
-                            </p>
-                            <div class="seminar-tags">
-                                <span>AI</span>
-                                <span>Web Applications</span>
-                                <span>Future Tech</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seminar-card">
-                        <div class="seminar-date">
-                            <span class="month">SEP</span>
-                            <span class="year">2024</span>
-                        </div>
-                        <div class="seminar-content">
-                            <h3>Responsive Design Workshop</h3>
-                            <p class="seminar-role">Co-presenter</p>
-                            <p class="seminar-description">
-                                A hands-on workshop teaching participants how to create truly responsive websites that work across all devices.
-                            </p>
-                            <div class="seminar-tags">
-                                <span>Responsive Design</span>
-                                <span>CSS</span>
-                                <span>Workshop</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="seminar-card">
-                        <div class="seminar-date">
-                            <span class="month">JUL</span>
-                            <span class="year">2024</span>
-                        </div>
-                        <div class="seminar-content">
-                            <h3>JavaScript Frameworks Comparison</h3>
-                            <p class="seminar-role">Attendee</p>
-                            <p class="seminar-description">
-                                A detailed comparison of popular JavaScript frameworks, discussing their strengths, weaknesses, and ideal use cases.
-                            </p>
-                            <div class="seminar-tags">
-                                <span>JavaScript</span>
-                                <span>Frameworks</span>
-                                <span>Front-end</span>
-                            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="seminars.html">Seminars</a></li>
+                <li><a href="innovation.html">Innovation Routes</a></li>
+                <li><a href="hackathon.html">Hackathons</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section class="intro">
+                <h2>My Seminar Experiences</h2>
+                <p>Here's a collection of seminars I've attended and presented at throughout my professional journey.</p>
+            </section>
+            
+            <section class="seminar-list">
+                <div class="seminar-item">
+                    <div class="seminar-date">June 2023</div>
+                    <div class="seminar-content">
+                        <h3>Web Development Best Practices</h3>
+                        <p class="seminar-role">Presenter</p>
+                        <p>Delivered a comprehensive presentation on modern web development practices, focusing on performance optimization and accessibility.</p>
+                        <div class="tags">
+                            <span class="tag">Web Dev</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Accessibility</span>
                         </div>
                     </div>
                 </div>
+                
+                <div class="seminar-item">
+                    <div class="seminar-date">March 2023</div>
+                    <div class="seminar-content">
+                        <h3>AI in Software Development</h3>
+                        <p class="seminar-role">Attendee</p>
+                        <p>Participated in an intensive workshop exploring the integration of AI tools in the software development lifecycle.</p>
+                        <div class="tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="seminar-item">
+                    <div class="seminar-date">November 2022</div>
+                    <div class="seminar-content">
+                        <h3>Open Source Contribution Workshop</h3>
+                        <p class="seminar-role">Co-presenter</p>
+                        <p>Co-led a hands-on workshop guiding participants through their first open source contributions.</p>
+                        <div class="tags">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="seminar-item">
+                    <div class="seminar-date">July 2022</div>
+                    <div class="seminar-content">
+                        <h3>Frontend Frameworks Comparison</h3>
+                        <p class="seminar-role">Panelist</p>
+                        <p>Participated in a panel discussion comparing the strengths and weaknesses of various frontend frameworks.</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Vue</span>
+                            <span class="tag">Angular</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta">
+                <h2>Interested in Collaborating?</h2>
+                <p>I'm always open to speaking opportunities and knowledge sharing sessions.</p>
+                <button class="retro-button" onclick="location.href='mailto:your.email@example.com'">Contact Me</button>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="visitor-counter">
+                <span>Visitor count: </span>
+                <span id="counter">12345</span>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="scripts/main.js"></script>
+            <p>&copy; 2024 Your Name | <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p class="footer-note">Best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
-

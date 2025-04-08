@@ -1,0 +1,531 @@
+/* Old School Theme CSS */
+:root {
+  --primary-color: #cd0000;
+  --secondary-color: #0033ff;
+  --accent-color: #0033ff;
+  --background-color: #f0f8ff;
+  --text-color: #000080;
+  --border-color: #4682b4;
+  --card-bg: #e6e6fa;
+  --header-bg: #ff0000;
+  --header-text: #ffffff;
+  --footer-bg: #000080;
+  --footer-text: #ffffff;
+  --button-bg: #235aff;
+  --button-hover: #0000cd;
+  --button-text: #ffffff;
+  --nav-active: #4169e1;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234682b4' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H5V0zm1 5v1H5v-1h1z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px;
+  text-align: center;
+  border: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.blink-text {
+  animation: blink 1s step-end infinite;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #e6e6fa;
+  border: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav li.active {
+  background-color: var(--nav-active);
+}
+
+nav li.active a {
+  color: white;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  background-color: white;
+  border: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-pic {
+  flex: 0 0 150px;
+  border: 2px solid var(--border-color);
+  padding: 5px;
+  background-color: white;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bio {
+  flex: 1;
+  min-width: 300px;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Skills Section */
+.skill-bars {
+  margin-top: 20px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.skill-bar {
+  display: inline-block;
+  width: calc(100% - 110px);
+  height: 20px;
+  background-color: #e0e0e0;
+  border: 1px solid var(--border-color);
+}
+
+.skill-level {
+  height: 100%;
+  background-color: var(--accent-color);
+}
+
+/* Projects Section */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  flex: 1 0 300px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.retro-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 2px outset var(--button-bg);
+  padding: 8px 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.retro-button:hover {
+  background-color: var(--button-hover);
+  border-style: inset;
+}
+
+.retro-button:active {
+  border-style: inset;
+  transform: translateY(2px);
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  background-color: var(--card-bg);
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 20px;
+  text-align: center;
+  border: 2px solid var(--border-color);
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.visitor-counter {
+  background-color: black;
+  color: #00ff00;
+  display: inline-block;
+  padding: 5px 10px;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 10px;
+  border: 1px solid #00ff00;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Seminars Page Styles */
+.seminar-list {
+  margin-top: 20px;
+}
+
+.seminar-item {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 20px;
+}
+
+.seminar-date {
+  flex: 0 0 100px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.seminar-content {
+  flex: 1;
+}
+
+.seminar-role {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Innovation Page Styles */
+.innovation-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.innovation-card h3 {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.innovation-content {
+  padding: 15px;
+}
+
+.innovation-details {
+  margin: 15px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.detail-item {
+  margin-bottom: 5px;
+}
+
+.detail-label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+.approach-steps {
+  margin-top: 20px;
+}
+
+.approach-step {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.step-number {
+  flex: 0 0 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.step-content {
+  flex: 1;
+}
+
+/* Hackathon Page Styles */
+.hackathon-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hackathon-card {
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.hackathon-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hackathon-date {
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.hackathon-content {
+  padding: 15px;
+  background-color: var(--card-bg);
+}
+
+.hackathon-project {
+  margin-bottom: 15px;
+}
+
+.hackathon-details {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  margin-bottom: 5px;
+}
+
+.detail-label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+.hackathon-tips {
+  margin-top: 30px;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tip {
+  flex: 1 0 200px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.tip h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  nav li:last-child {
+    border-bottom: none;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill-name {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .skill-bar {
+    width: 100%;
+  }
+
+  .seminar-item {
+    flex-direction: column;
+  }
+
+  .seminar-date {
+    margin-bottom: 10px;
+  }
+
+  .approach-step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-number {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
