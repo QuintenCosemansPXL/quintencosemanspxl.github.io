@@ -8,104 +8,120 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1>Welcome to My Online Portfolio</h1>
-                <div class="blink-text">// Online since 2022 //</div>
+    <div class="desktop">
+        <div class="icons">
+            <div class="desktop-icon" onclick="location.href='index.html'">
+                <div class="icon-img home-icon"></div>
+                <span>Home</span>
             </div>
-        </header>
-        
-        <nav>
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="seminars.html">Seminars</a></li>
-                <li><a href="innovation.html">Innovation Routes</a></li>
-                <li><a href="hackathon.html">Hackathons</a></li>
-            </ul>
-        </nav>
-        
-        <main>
-            <section class="about">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="profile-pic">
-                        <img src="image.png" alt="Profile Picture">
-                    </div>
-                    <div class="bio">
-                        <p>Hello! I'm <span class="highlight">Quinten Cosemans</span>, a passionate developer with expertise in various technologies.</p>
-                        <p>Welcome to my personal portfolio website where I showcase my projects, experiences, and professional journey.</p>
-                        <p>Feel free to explore and learn more about my work!</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="skills">
-                <h2>My Skills</h2>
-                <div class="skill-bars">
-                    <div class="skill">
-                        <span class="skill-name">HTML/CSS</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span class="skill-name">React</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span class="skill-name">Node.js</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 75%"></div>
-                        </div>
+            <div class="desktop-icon" onclick="location.href='seminars.html'">
+                <div class="icon-img seminars-icon"></div>
+                <span>Seminars</span>
+            </div>
+            <div class="desktop-icon" onclick="location.href='innovation.html'">
+                <div class="icon-img innovation-icon"></div>
+                <span>Innovation</span>
+            </div>
+            <div class="desktop-icon" onclick="location.href='hackathon.html'">
+                <div class="icon-img hackathon-icon"></div>
+                <span>Hackathons</span>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="window-header">
+                <div class="title-bar">
+                    <div class="title-bar-text">Home - My Portfolio</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
                     </div>
                 </div>
-            </section>
-            
-            <section class="projects">
-                <h2>Featured Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>A brief description of your first project goes here.</p>
-                        <div class="button-container">
-                            <button class="retro-button" onclick="window.open('https://github.com/yourusername/project1', '_blank')">View Project</button>
+                <div class="menu-bar">
+                    <div class="menu-item">File</div>
+                    <div class="menu-item">Edit</div>
+                    <div class="menu-item">View</div>
+                    <div class="menu-item">Help</div>
+                </div>
+                <div class="address-bar">
+                    <span>Address:</span>
+                    <div class="address-path">C:\Portfolio\Home</div>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <div class="sidebar">
+                    <div class="sidebar-header">Portfolio Sections</div>
+                    <div class="sidebar-item active">
+                        <div class="folder-icon"></div>
+                        <span>Home</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='seminars.html'">
+                        <div class="folder-icon"></div>
+                        <span>Seminars</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='innovation.html'">
+                        <div class="folder-icon"></div>
+                        <span>Innovation Routes</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='hackathon.html'">
+                        <div class="folder-icon"></div>
+                        <span>Hackathons</span>
+                    </div>
+                </div>
+
+                <div class="content-area">
+                    <div class="folder-view">
+                        <div class="file-item about-file">
+                            <div class="file-icon text-file"></div>
+                            <span>About Me.txt</span>
+                        </div>
+                        <div class="file-item skills-file">
+                            <div class="file-icon text-file"></div>
+                            <span>My Skills.txt</span>
+                        </div>
+                        <div class="file-item projects-file">
+                            <div class="file-icon folder-file"></div>
+                            <span>Projects</span>
+                        </div>
+                        <div class="file-item contact-file">
+                            <div class="file-icon contact-file-icon"></div>
+                            <span>Contact.vcf</span>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>A brief description of your second project goes here.</p>
-                        <div class="button-container">
-                            <button class="retro-button" onclick="window.open('https://github.com/yourusername/project2', '_blank')">View Project</button>
+
+                    <div class="file-preview" id="file-preview">
+                        <div class="preview-header">
+                            <div class="preview-title">About Me.txt</div>
+                            <button class="close-preview">×</button>
+                        </div>
+                        <div class="preview-content">
+                            <div class="about-content">
+                                <div class="profile-section">
+                                    <img src="/placeholder.svg?height=150&width=150" alt="Profile Picture" class="profile-pic">
+                                    <h2>Your Name</h2>
+                                    <p class="profile-title">Software Developer</p>
+                                </div>
+                                <div class="about-text">
+                                    <p>Hello! I'm a passionate developer with expertise in various technologies.</p>
+                                    <p>Welcome to my personal portfolio website where I showcase my projects, experiences, and professional journey.</p>
+                                    <p>Feel free to explore and learn more about my work!</p>
+                                    <p>This portfolio is designed in the style of Windows Explorer to showcase my creativity and attention to detail.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            
-            <section class="cta">
-                <h2>Explore More</h2>
-                <p>Check out my experiences in seminars, innovation routes, and hackathons!</p>
-                <div class="button-grid">
-                    <button class="retro-button" onclick="location.href='seminars.html'">Seminars</button>
-                    <button class="retro-button" onclick="location.href='innovation.html'">Innovation Routes</button>
-                    <button class="retro-button" onclick="location.href='hackathon.html'">Hackathons</button>
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 Quinten Cosemans | <a href="mailto:quinten.cosemans@student.pxl.be">quinten.cosemans@student.pxl.be</a></p>
-        </footer>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-item">4 items</div>
+                <div class="status-item">867 MB free of 4.00 GB</div>
+            </div>
+        </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

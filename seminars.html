@@ -3,108 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminars | My Portfolio</title>
+    <title>Seminars - Windows Explorer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1>Seminars & Presentations</h1>
-                <div class="blink-text">// Knowledge Sharing //</div>
+    <div class="desktop">
+        <div class="icons">
+            <div class="desktop-icon" onclick="location.href='index.html'">
+                <div class="icon-img home-icon"></div>
+                <span>Home</span>
             </div>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="seminars.html">Seminars</a></li>
-                <li><a href="innovation.html">Innovation Routes</a></li>
-                <li><a href="hackathon.html">Hackathons</a></li>
-            </ul>
-        </nav>
-        
-        <main>
-            <section class="intro">
-                <h2>My Seminar Experiences</h2>
-                <p>Here's a collection of seminars I've attended and presented at throughout my professional journey.</p>
-            </section>
-            
-            <section class="seminar-list">
-                <div class="seminar-item">
-                    <div class="seminar-date">June 2023</div>
-                    <div class="seminar-content">
-                        <h3>Web Development Best Practices</h3>
-                        <p class="seminar-role">Presenter</p>
-                        <p>Delivered a comprehensive presentation on modern web development practices, focusing on performance optimization and accessibility.</p>
-                        <div class="tags">
-                            <span class="tag">Web Dev</span>
-                            <span class="tag">Performance</span>
-                            <span class="tag">Accessibility</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="seminar-item">
-                    <div class="seminar-date">March 2023</div>
-                    <div class="seminar-content">
-                        <h3>AI in Software Development</h3>
-                        <p class="seminar-role">Attendee</p>
-                        <p>Participated in an intensive workshop exploring the integration of AI tools in the software development lifecycle.</p>
-                        <div class="tags">
-                            <span class="tag">AI</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">DevOps</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="seminar-item">
-                    <div class="seminar-date">November 2022</div>
-                    <div class="seminar-content">
-                        <h3>Open Source Contribution Workshop</h3>
-                        <p class="seminar-role">Co-presenter</p>
-                        <p>Co-led a hands-on workshop guiding participants through their first open source contributions.</p>
-                        <div class="tags">
-                            <span class="tag">Open Source</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">Collaboration</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="seminar-item">
-                    <div class="seminar-date">July 2022</div>
-                    <div class="seminar-content">
-                        <h3>Frontend Frameworks Comparison</h3>
-                        <p class="seminar-role">Panelist</p>
-                        <p>Participated in a panel discussion comparing the strengths and weaknesses of various frontend frameworks.</p>
-                        <div class="tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Vue</span>
-                            <span class="tag">Angular</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="cta">
-                <h2>Interested in Collaborating?</h2>
-                <p>I'm always open to speaking opportunities and knowledge sharing sessions.</p>
-                <button class="retro-button" onclick="location.href='mailto:your.email@example.com'">Contact Me</button>
-            </section>
-        </main>
-        
-        <footer>
-            <div class="visitor-counter">
-                <span>Visitor count: </span>
-                <span id="counter">12345</span>
+            <div class="desktop-icon" onclick="location.href='seminars.html'">
+                <div class="icon-img seminars-icon"></div>
+                <span>Seminars</span>
             </div>
-            <p>&copy; 2024 Your Name | <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p class="footer-note">Best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
-        </footer>
+            <div class="desktop-icon" onclick="location.href='innovation.html'">
+                <div class="icon-img innovation-icon"></div>
+                <span>Innovation</span>
+            </div>
+            <div class="desktop-icon" onclick="location.href='hackathon.html'">
+                <div class="icon-img hackathon-icon"></div>
+                <span>Hackathons</span>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="window-header">
+                <div class="title-bar">
+                    <div class="title-bar-text">Seminars - My Portfolio</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu-item">File</div>
+                    <div class="menu-item">Edit</div>
+                    <div class="menu-item">View</div>
+                    <div class="menu-item">Help</div>
+                </div>
+                <div class="address-bar">
+                    <span>Address:</span>
+                    <div class="address-path">C:\Portfolio\Seminars</div>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <div class="sidebar">
+                    <div class="sidebar-header">Portfolio Sections</div>
+                    <div class="sidebar-item" onclick="location.href='index.html'">
+                        <div class="folder-icon"></div>
+                        <span>Home</span>
+                    </div>
+                    <div class="sidebar-item active">
+                        <div class="folder-icon"></div>
+                        <span>Seminars</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='innovation.html'">
+                        <div class="folder-icon"></div>
+                        <span>Innovation Routes</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='hackathon.html'">
+                        <div class="folder-icon"></div>
+                        <span>Hackathons</span>
+                    </div>
+                </div>
+
+                <div class="content-area">
+                    <div class="folder-view">
+                        <div class="file-item seminar-2023-06">
+                            <div class="file-icon presentation-file"></div>
+                            <span>2023-06-WebDev.ppt</span>
+                        </div>
+                        <div class="file-item seminar-2023-03">
+                            <div class="file-icon document-file"></div>
+                            <span>2023-03-AI-Workshop.doc</span>
+                        </div>
+                        <div class="file-item seminar-2022-11">
+                            <div class="file-icon presentation-file"></div>
+                            <span>2022-11-OpenSource.ppt</span>
+                        </div>
+                        <div class="file-item seminar-2022-07">
+                            <div class="file-icon document-file"></div>
+                            <span>2022-07-Frontend.doc</span>
+                        </div>
+                    </div>
+
+                    <div class="file-preview" id="file-preview">
+                        <div class="preview-header">
+                            <div class="preview-title">2023-06-WebDev.ppt</div>
+                            <button class="close-preview">×</button>
+                        </div>
+                        <div class="preview-content">
+                            <div class="seminar-content">
+                                <h2>Web Development Best Practices</h2>
+                                <div class="seminar-details">
+                                    <p><strong>Date:</strong> June 2023</p>
+                                    <p><strong>Role:</strong> Presenter</p>
+                                    <p><strong>Location:</strong> Tech Conference 2023</p>
+                                </div>
+                                <div class="seminar-description">
+                                    <p>Delivered a comprehensive presentation on modern web development practices, focusing on performance optimization and accessibility.</p>
+                                    <p>Key topics covered:</p>
+                                    <ul>
+                                        <li>Modern JavaScript frameworks</li>
+                                        <li>Performance optimization techniques</li>
+                                        <li>Web accessibility standards</li>
+                                        <li>Responsive design principles</li>
+                                    </ul>
+                                    <p>The presentation was well-received with over 200 attendees and sparked engaging discussions on best practices in the industry.</p>
+                                </div>
+                                <div class="seminar-tags">
+                                    <span class="tag">Web Dev</span>
+                                    <span class="tag">Performance</span>
+                                    <span class="tag">Accessibility</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-item">4 items</div>
+                <div class="status-item">867 MB free of 4.00 GB</div>
+            </div>
+        </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

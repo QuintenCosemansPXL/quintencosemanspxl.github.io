@@ -3,170 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathons | My Portfolio</title>
+    <title>Hackathons - Windows Explorer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1>Hackathon Experiences</h1>
-                <div class="blink-text">// Code, Coffee, Create //</div>
+    <div class="desktop">
+        <div class="icons">
+            <div class="desktop-icon" onclick="location.href='index.html'">
+                <div class="icon-img home-icon"></div>
+                <span>Home</span>
             </div>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="seminars.html">Seminars</a></li>
-                <li><a href="innovation.html">Innovation Routes</a></li>
-                <li class="active"><a href="hackathon.html">Hackathons</a></li>
-            </ul>
-        </nav>
-        
-        <main>
-            <section class="intro">
-                <h2>My Hackathon Journey</h2>
-                <p>Hackathons have been instrumental in sharpening my skills, fostering creativity, and building my network. Here's a showcase of my hackathon experiences.</p>
-            </section>
-            
-            <section class="hackathon-grid">
-                <div class="hackathon-card">
-                    <div class="hackathon-header">
-                        <h3>TechCrunch Disrupt Hackathon</h3>
-                        <span class="hackathon-date">September 2023</span>
-                    </div>
-                    <div class="hackathon-content">
-                        <div class="hackathon-project">
-                            <h4>EcoTrack</h4>
-                            <p>An app that helps users track and reduce their carbon footprint through daily activities.</p>
-                        </div>
-                        <div class="hackathon-details">
-                            <div class="detail-row">
-                                <span class="detail-label">Team:</span>
-                                <span class="detail-value">4 members</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">Frontend Developer & Presenter</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Tech Stack:</span>
-                                <span class="detail-value">React Native, Firebase, Google Maps API</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Achievement:</span>
-                                <span class="detail-value">2nd Place Overall</span>
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="retro-button" onclick="window.open('https://github.com/yourusername/ecotrack', '_blank')">View Project</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hackathon-card">
-                    <div class="hackathon-header">
-                        <h3>Global AI Hackathon</h3>
-                        <span class="hackathon-date">May 2023</span>
-                    </div>
-                    <div class="hackathon-content">
-                        <div class="hackathon-project">
-                            <h4>MediAssist</h4>
-                            <p>An AI-powered medical diagnosis assistant for healthcare professionals in remote areas.</p>
-                        </div>
-                        <div class="hackathon-details">
-                            <div class="detail-row">
-                                <span class="detail-label">Team:</span>
-                                <span class="detail-value">3 members</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">ML Engineer & Backend Developer</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Tech Stack:</span>
-                                <span class="detail-value">Python, TensorFlow, Flask, React</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Achievement:</span>
-                                <span class="detail-value">Best Healthcare Solution Award</span>
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="retro-button" onclick="window.open('https://github.com/yourusername/mediassist', '_blank')">View Project</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hackathon-card">
-                    <div class="hackathon-header">
-                        <h3>Blockchain Developer Summit</h3>
-                        <span class="hackathon-date">January 2023</span>
-                    </div>
-                    <div class="hackathon-content">
-                        <div class="hackathon-project">
-                            <h4>SecureVote</h4>
-                            <p>A blockchain-based voting system ensuring transparency and security in elections.</p>
-                        </div>
-                        <div class="hackathon-details">
-                            <div class="detail-row">
-                                <span class="detail-label">Team:</span>
-                                <span class="detail-value">5 members</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">Blockchain Developer</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Tech Stack:</span>
-                                <span class="detail-value">Solidity, Ethereum, Web3.js, React</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-label">Achievement:</span>
-                                <span class="detail-value">Most Innovative Use Case</span>
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="retro-button" onclick="window.open('https://github.com/yourusername/securevote', '_blank')">View Project</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="hackathon-tips">
-                <h2>Hackathon Tips & Insights</h2>
-                <div class="tips-container">
-                    <div class="tip">
-                        <h3>Focus on MVP</h3>
-                        <p>Build a Minimum Viable Product first, then add features if time permits.</p>
-                    </div>
-                    <div class="tip">
-                        <h3>Team Dynamics</h3>
-                        <p>Clear role definition and effective communication are key to success.</p>
-                    </div>
-                    <div class="tip">
-                        <h3>Presentation Matters</h3>
-                        <p>A compelling presentation can make even a simple project stand out.</p>
-                    </div>
-                    <div class="tip">
-                        <h3>Network</h3>
-                        <p>Use hackathons as opportunities to connect with like-minded professionals.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <div class="visitor-counter">
-                <span>Visitor count: </span>
-                <span id="counter">12345</span>
+            <div class="desktop-icon" onclick="location.href='seminars.html'">
+                <div class="icon-img seminars-icon"></div>
+                <span>Seminars</span>
             </div>
-            <p>&copy; 2024 Your Name | <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p class="footer-note">Best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
-        </footer>
+            <div class="desktop-icon" onclick="location.href='innovation.html'">
+                <div class="icon-img innovation-icon"></div>
+                <span>Innovation</span>
+            </div>
+            <div class="desktop-icon" onclick="location.href='hackathon.html'">
+                <div class="icon-img hackathon-icon"></div>
+                <span>Hackathons</span>
+            </div>
+        </div>
+
+        <div class="window">
+            <div class="window-header">
+                <div class="title-bar">
+                    <div class="title-bar-text">Hackathons - My Portfolio</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu-item">File</div>
+                    <div class="menu-item">Edit</div>
+                    <div class="menu-item">View</div>
+                    <div class="menu-item">Help</div>
+                </div>
+                <div class="address-bar">
+                    <span>Address:</span>
+                    <div class="address-path">C:\Portfolio\Hackathons</div>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <div class="sidebar">
+                    <div class="sidebar-header">Portfolio Sections</div>
+                    <div class="sidebar-item" onclick="location.href='index.html'">
+                        <div class="folder-icon"></div>
+                        <span>Home</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='seminars.html'">
+                        <div class="folder-icon"></div>
+                        <span>Seminars</span>
+                    </div>
+                    <div class="sidebar-item" onclick="location.href='innovation.html'">
+                        <div class="folder-icon"></div>
+                        <span>Innovation Routes</span>
+                    </div>
+                    <div class="sidebar-item active">
+                        <div class="folder-icon"></div>
+                        <span>Hackathons</span>
+                    </div>
+                </div>
+
+                <div class="content-area">
+                    <div class="folder-view">
+                        <div class="file-item hackathon-ecotrack">
+                            <div class="file-icon folder-file"></div>
+                            <span>EcoTrack-2023</span>
+                        </div>
+                        <div class="file-item hackathon-mediassist">
+                            <div class="file-icon folder-file"></div>
+                            <span>MediAssist-2023</span>
+                        </div>
+                        <div class="file-item hackathon-securevote">
+                            <div class="file-icon folder-file"></div>
+                            <span>SecureVote-2023</span>
+                        </div>
+                        <div class="file-item hackathon-tips">
+                            <div class="file-icon text-file"></div>
+                            <span>Hackathon-Tips.txt</span>
+                        </div>
+                    </div>
+
+                    <div class="file-preview" id="file-preview">
+                        <div class="preview-header">
+                            <div class="preview-title">EcoTrack-2023</div>
+                            <button class="close-preview">×</button>
+                        </div>
+                        <div class="preview-content">
+                            <div class="hackathon-content">
+                                <h2>EcoTrack - TechCrunch Disrupt Hackathon</h2>
+                                <div class="hackathon-image">
+                                    <div class="placeholder-image"></div>
+                                </div>
+                                <div class="hackathon-details">
+                                    <p><strong>Date:</strong> September 2023</p>
+                                    <p><strong>Team:</strong> 4 members</p>
+                                    <p><strong>Role:</strong> Frontend Developer & Presenter</p>
+                                    <p><strong>Tech Stack:</strong> React Native, Firebase, Google Maps API</p>
+                                    <p><strong>Achievement:</strong> 2nd Place Overall</p>
+                                </div>
+                                <div class="hackathon-description">
+                                    <p>An app that helps users track and reduce their carbon footprint through daily activities.</p>
+                                    <p>Key features:</p>
+                                    <ul>
+                                        <li>Real-time carbon footprint calculation</li>
+                                        <li>Personalized recommendations for reducing emissions</li>
+                                        <li>Community challenges and leaderboards</li>
+                                        <li>Integration with transportation and utility services</li>
+                                    </ul>
+                                    <p>Our team developed this solution in just 48 hours and received recognition for its innovative approach to environmental sustainability.</p>
+                                </div>
+                                <div class="hackathon-buttons">
+                                    <button class="win-button">View Demo</button>
+                                    <button class="win-button">GitHub Repo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-item">4 items</div>
+                <div class="status-item">867 MB free of 4.00 GB</div>
+            </div>
+        </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
