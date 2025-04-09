@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (menuName === "View") {
         alert("View menu options would appear here.")
       } else if (menuName === "Help") {
-        alert("Help menu options would appear here.")
+        alert("Help Warre find a gf!")
       }
     })
   })
