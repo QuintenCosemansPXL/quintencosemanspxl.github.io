@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Set last login date
   const now = new Date()
-  document.getElementById("last-login").textContent = now.toUTCString()
+  now.setHours(now.getHours() + 2)
+  document.getElementById("last-login").textContent = now.toUTCString().replace("GMT", "GMT+2")
 
   // Get command input element
   const commandInput = document.getElementById("command-input")
@@ -88,19 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
       case "ls":
         const currentPath = window.location.pathname.split("/").pop()
         if (currentPath === "index.html" || currentPath === "") {
-          responseLine.innerHTML = `
-                        <p>Contents of ~:</p>
+          responseLine.innerHTML = `      
                         <ul>
                             <li><span style="color: #27c93f;">seminars/</span></li>
                             <li><span style="color: #27c93f;">innovation/</span></li>
                             <li><span style="color: #27c93f;">hackathon/</span></li>
                             <li><span style="color: #ffbd2e;">about_me.txt</span></li>
-                            <li><span style="color: #ffbd2e;">skills.txt</span></li>
                         </ul>
                     `
         } else if (currentPath === "seminars.html") {
           responseLine.innerHTML = `
-                        <p>Contents of ~/seminars:</p>
                         <ul>
                             <li><span style="color: #ffbd2e;">web_development_2023.txt</span></li>
                             <li><span style="color: #ffbd2e;">ai_machine_learning.txt</span></li>
@@ -109,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     `
         } else if (currentPath === "innovation.html") {
           responseLine.innerHTML = `
-                        <p>Contents of ~/innovation:</p>
                         <ul>
                             <li><span style="color: #27c93f;">ai_powered_education/</span></li>
                             <li><span style="color: #27c93f;">sustainable_tech/</span></li>
@@ -118,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     `
         } else if (currentPath === "hackathon.html") {
           responseLine.innerHTML = `
-                        <p>Contents of ~/hackathon:</p>
                         <ul>
                             <li><span style="color: #ffbd2e;">EcoTrack.project</span></li>
                             <li><span style="color: #ffbd2e;">HealthBot.project</span></li>
@@ -130,14 +126,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       case "whoami":
         responseLine.innerHTML = `
-                    <p>user</p>
-                    <p>Role: Portfolio Owner</p>
-                    <p>Status: Available for hire</p>
-                `
+        <p><img src="/images/email.png" alt="Email">: fake@example.com<a href="mailto:fake@example.com"></a></p>
+        <p>💼: <a href="https://www.linkedin.com/in/fakeuser" target="_blank">fakeuser</a></p>
+        <p>🐙: <a href="https://github.com/fakeuser" target="_blank">fakeuser</a></p>
+        `
         break
 
       case "date":
-        responseLine.innerHTML = `<p>${new Date().toUTCString()}</p>`
+        const date = new Date()
+        date.setHours(date.getHours() + 2)
+        responseLine.innerHTML = `<p>${date.toUTCString().replace('GMT', 'GMT+2')}</p>`
         break
 
       default:
