@@ -1,114 +1,186 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // File item click handlers
-  const fileItems = document.querySelectorAll(".file-item")
-  const filePreview = document.getElementById("file-preview")
-  const previewTitle = document.querySelector(".preview-title")
-  const previewContent = document.querySelector(".preview-content")
+  // Set last login date
+  const now = new Date()
+  document.getElementById("last-login").textContent = now.toUTCString()
 
-  fileItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      // Get the file name from the span inside the file item
-      const fileName = item.querySelector("span").textContent
+  // Get command input element
+  const commandInput = document.getElementById("command-input")
+  const output = document.getElementById("output")
+  const promptSpan = document.querySelector(".prompt")
 
-      // Update the preview title
-      if (previewTitle) {
-        previewTitle.textContent = fileName
-      }
+  // Set focus to command input
+  commandInput.focus()
 
-      // Show the file preview
-      if (filePreview) {
-        filePreview.style.display = "flex"
-      }
-
-      // Highlight the selected file
-      fileItems.forEach((fi) => {
-        fi.style.backgroundColor = ""
-        fi.style.color = ""
-      })
-      item.style.backgroundColor = "var(--win-blue-active)"
-      item.style.color = "var(--win-white)"
-    })
+  // Keep focus on command input when clicking anywhere in the terminal
+  document.querySelector(".terminal").addEventListener("click", (e) => {
+    // Don't focus if clicking on a link
+    if (!e.target.closest("a")) {
+      commandInput.focus()
+    }
   })
 
-  // Close preview button
-  const closePreviewBtn = document.querySelector(".close-preview")
-  if (closePreviewBtn) {
-    closePreviewBtn.addEventListener("click", () => {
-      if (filePreview) {
-        filePreview.style.display = "none"
-      }
+  // Handle command input
+  commandInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      const command = commandInput.value.trim().toLowerCase()
 
-      // Remove highlight from all file items
-      fileItems.forEach((fi) => {
-        fi.style.backgroundColor = ""
-        fi.style.color = ""
-      })
-    })
-  }
+      // Add command to output
+      const commandLine = document.createElement("div")
+      commandLine.className = "line"
+      commandLine.innerHTML = `<span class="prompt">${promptSpan.textContent}</span> ${command}`
+      output.appendChild(commandLine)
 
-  // Window controls functionality
-  const minimizeBtn = document.querySelector('button[aria-label="Minimize"]')
-  const maximizeBtn = document.querySelector('button[aria-label="Maximize"]')
-  const closeBtn = document.querySelector('button[aria-label="Close"]')
-  const window = document.querySelector(".window")
+      // Process command
+      processCommand(command)
 
-  if (minimizeBtn) {
-    minimizeBtn.addEventListener("click", () => {
-      alert("Minimize functionality would be implemented in a real application.")
-    })
-  }
+      // Clear input
+      commandInput.value = ""
 
-  if (maximizeBtn) {
-    maximizeBtn.addEventListener("click", () => {
-      if (window) {
-        if (window.style.width === "100%") {
-          window.style.width = "1000px"
-          window.style.height = "80vh"
-          window.style.margin = "0 auto"
-        } else {
-          window.style.width = "100%"
-          window.style.height = "100vh"
-          window.style.margin = "0"
+      // Scroll to bottom
+      document.querySelector(".terminal-content").scrollTop = document.querySelector(".terminal-content").scrollHeight
+    }
+  })
+
+  // Process commands
+  function processCommand(command) {
+    const responseLine = document.createElement("div")
+    responseLine.className = "line"
+
+    switch (command) {
+      case "help":
+        responseLine.innerHTML = `
+                    <p>Available commands:</p>
+                    <ul class="command-list">
+                        <li><span class="command">cd seminars</span> - View seminars</li>
+                        <li><span class="command">cd innovation</span> - Explore innovation routes</li>
+                        <li><span class="command">cd hackathon</span> - See hackathon projects</li>
+                        <li><span class="command">cd ~</span> - Return to homepage</li>
+                        <li><span class="command">clear</span> - Clear the terminal</li>
+                        <li><span class="command">ls</span> - List contents of current directory</li>
+                        <li><span class="command">whoami</span> - Display user information</li>
+                        <li><span class="command">date</span> - Display current date and time</li>
+                    </ul>
+                `
+        break
+
+      case "cd seminars":
+        window.location.href = "seminars.html"
+        return
+
+      case "cd innovation":
+        window.location.href = "innovation.html"
+        return
+
+      case "cd hackathon":
+        window.location.href = "hackathon.html"
+        return
+
+      case "cd ~":
+        window.location.href = "index.html"
+        return
+
+      case "clear":
+        while (output.firstChild) {
+          output.removeChild(output.firstChild)
         }
-      }
-    })
+        return
+
+      case "ls":
+        const currentPath = window.location.pathname.split("/").pop()
+        if (currentPath === "index.html" || currentPath === "") {
+          responseLine.innerHTML = `
+                        <p>Contents of ~:</p>
+                        <ul>
+                            <li><span style="color: #27c93f;">seminars/</span></li>
+                            <li><span style="color: #27c93f;">innovation/</span></li>
+                            <li><span style="color: #27c93f;">hackathon/</span></li>
+                            <li><span style="color: #ffbd2e;">about_me.txt</span></li>
+                            <li><span style="color: #ffbd2e;">skills.txt</span></li>
+                        </ul>
+                    `
+        } else if (currentPath === "seminars.html") {
+          responseLine.innerHTML = `
+                        <p>Contents of ~/seminars:</p>
+                        <ul>
+                            <li><span style="color: #ffbd2e;">web_development_2023.txt</span></li>
+                            <li><span style="color: #ffbd2e;">ai_machine_learning.txt</span></li>
+                            <li><span style="color: #ffbd2e;">cybersecurity_basics.txt</span></li>
+                        </ul>
+                    `
+        } else if (currentPath === "innovation.html") {
+          responseLine.innerHTML = `
+                        <p>Contents of ~/innovation:</p>
+                        <ul>
+                            <li><span style="color: #27c93f;">ai_powered_education/</span></li>
+                            <li><span style="color: #27c93f;">sustainable_tech/</span></li>
+                            <li><span style="color: #27c93f;">blockchain_for_good/</span></li>
+                        </ul>
+                    `
+        } else if (currentPath === "hackathon.html") {
+          responseLine.innerHTML = `
+                        <p>Contents of ~/hackathon:</p>
+                        <ul>
+                            <li><span style="color: #ffbd2e;">EcoTrack.project</span></li>
+                            <li><span style="color: #ffbd2e;">HealthBot.project</span></li>
+                            <li><span style="color: #ffbd2e;">SecureShare.project</span></li>
+                        </ul>
+                    `
+        }
+        break
+
+      case "whoami":
+        responseLine.innerHTML = `
+                    <p>user</p>
+                    <p>Role: Portfolio Owner</p>
+                    <p>Status: Available for hire</p>
+                `
+        break
+
+      case "date":
+        responseLine.innerHTML = `<p>${new Date().toUTCString()}</p>`
+        break
+
+      default:
+        if (command === "") {
+          return
+        }
+        responseLine.innerHTML = `<p>Command not found: ${command}. Type 'help' to see available commands.</p>`
+    }
+
+    output.appendChild(responseLine)
   }
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      if (window) {
-        window.style.display = "none"
-        setTimeout(() => {
-          window.style.display = "flex"
-        }, 1000)
-      }
-    })
-  }
+  // Add click event listeners to command spans
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("command")) {
+      const command = event.target.textContent
+      // Execute the command directly
+      const commandLine = document.createElement("div")
+      commandLine.className = "line"
+      commandLine.innerHTML = `<span class="prompt">${promptSpan.textContent}</span> ${command}`
+      output.appendChild(commandLine)
 
-  // Menu items functionality
-  const menuItems = document.querySelectorAll(".menu-item")
-  menuItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const menuName = item.textContent
-      if (menuName === "File") {
-        alert("File menu options would appear here.")
-      } else if (menuName === "Edit") {
-        alert("Edit menu options would appear here.")
-      } else if (menuName === "View") {
-        alert("View menu options would appear here.")
-      } else if (menuName === "Help") {
-        alert("Help Warre find a gf!")
-      }
-    })
+      processCommand(command)
+
+      // Scroll to bottom
+      document.querySelector(".terminal-content").scrollTop = document.querySelector(".terminal-content").scrollHeight
+    }
   })
 
-  // Simulate Windows startup sound
-  const playStartupSound = () => {
-    // This would play a sound in a real application
-    console.log("Windows startup sound played")
+  // Add typing animation to the terminal
+  function typeWriter(element, text, i = 0, speed = 50) {
+    if (i < text.length) {
+      element.textContent += text.charAt(i)
+      i++
+      setTimeout(() => typeWriter(element, text, i, speed), speed)
+    }
   }
 
-  // Play startup sound when page loads
-  playStartupSound()
+  // Initialize typing effect for welcome message
+  const welcomeElement = document.querySelector(".line:first-child")
+  if (welcomeElement) {
+    const welcomeText = welcomeElement.textContent
+    welcomeElement.textContent = ""
+    typeWriter(welcomeElement, welcomeText)
+  }
 })

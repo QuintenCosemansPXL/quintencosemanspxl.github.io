@@ -3,135 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminars - Windows Explorer</title>
+    <title>~/seminars</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="desktop">
-        <div class="icons">
-            <div class="desktop-icon" onclick="location.href='index.html'">
-                <div class="icon-img home-icon"></div>
-                <span>Home</span>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
             </div>
-            <div class="desktop-icon" onclick="location.href='seminars.html'">
-                <div class="icon-img seminars-icon"></div>
-                <span>Seminars</span>
-            </div>
-            <div class="desktop-icon" onclick="location.href='innovation.html'">
-                <div class="icon-img innovation-icon"></div>
-                <span>Innovation</span>
-            </div>
-            <div class="desktop-icon" onclick="location.href='hackathon.html'">
-                <div class="icon-img hackathon-icon"></div>
-                <span>Hackathons</span>
-            </div>
+            <div class="terminal-title">user@portfolio:~/seminars</div>
         </div>
-
-        <div class="window">
-            <div class="window-header">
-                <div class="title-bar">
-                    <div class="title-bar-text">Seminars - My Portfolio</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="menu-bar">
-                    <div class="menu-item">File</div>
-                    <div class="menu-item">Edit</div>
-                    <div class="menu-item">View</div>
-                    <div class="menu-item">Help</div>
-                </div>
-                <div class="address-bar">
-                    <span>Address:</span>
-                    <div class="address-path">C:\Portfolio\Seminars</div>
-                </div>
-            </div>
-
-            <div class="window-content">
-                <div class="sidebar">
-                    <div class="sidebar-header">Portfolio Sections</div>
-                    <div class="sidebar-item" onclick="location.href='index.html'">
-                        <div class="folder-icon"></div>
-                        <span>Home</span>
-                    </div>
-                    <div class="sidebar-item active">
-                        <div class="folder-icon"></div>
-                        <span>Seminars</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='innovation.html'">
-                        <div class="folder-icon"></div>
-                        <span>Innovation Routes</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='hackathon.html'">
-                        <div class="folder-icon"></div>
-                        <span>Hackathons</span>
-                    </div>
-                </div>
-
-                <div class="content-area">
-                    <div class="folder-view">
-                        <div class="file-item seminar-2023-06">
-                            <div class="file-icon presentation-file"></div>
-                            <span>2023-06-WebDev.ppt</span>
+        <div class="terminal-content">
+            <div id="output">
+                <div class="line">Current directory: ~/seminars</div>
+                <div class="line">-----------------------------------------</div>
+                <div class="line">
+                    <h2>~/seminars/list</h2>
+                    <div class="file-list">
+                        <div class="file with-image">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">web_development_2023.txt</span>
+                            <div class="file-content">
+                                <h3>Advanced Web Development Techniques</h3>
+                                <p><strong>Date:</strong> June 2023</p>
+                                <p><strong>Role:</strong> Attendee</p>
+                                <p><strong>Description:</strong> Learned about the latest web development frameworks and best practices for building scalable applications.</p>
+                            </div>
+                            <div class="terminal-image">
+                                <img src="/placeholder.svg?height=200&width=300" alt="Web Development Seminar">
+                                <div class="terminal-image-caption">web_dev_seminar.jpg</div>
+                            </div>
                         </div>
-                        <div class="file-item seminar-2023-03">
-                            <div class="file-icon document-file"></div>
-                            <span>2023-03-AI-Workshop.doc</span>
+                        <div class="file">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">ai_machine_learning.txt</span>
+                            <div class="file-content">
+                                <h3>AI and Machine Learning Workshop</h3>
+                                <p><strong>Date:</strong> September 2023</p>
+                                <p><strong>Role:</strong> Presenter</p>
+                                <p><strong>Description:</strong> Presented on implementing machine learning algorithms in web applications and demonstrated practical use cases.</p>
+                            </div>
                         </div>
-                        <div class="file-item seminar-2022-11">
-                            <div class="file-icon presentation-file"></div>
-                            <span>2022-11-OpenSource.ppt</span>
-                        </div>
-                        <div class="file-item seminar-2022-07">
-                            <div class="file-icon document-file"></div>
-                            <span>2022-07-Frontend.doc</span>
-                        </div>
-                    </div>
-
-                    <div class="file-preview" id="file-preview">
-                        <div class="preview-header">
-                            <div class="preview-title">2023-06-WebDev.ppt</div>
-                            <button class="close-preview">×</button>
-                        </div>
-                        <div class="preview-content">
-                            <div class="seminar-content">
-                                <h2>Web Development Best Practices</h2>
-                                <div class="seminar-details">
-                                    <p><strong>Date:</strong> June 2023</p>
-                                    <p><strong>Role:</strong> Presenter</p>
-                                    <p><strong>Location:</strong> Tech Conference 2023</p>
-                                </div>
-                                <div class="seminar-description">
-                                    <p>Delivered a comprehensive presentation on modern web development practices, focusing on performance optimization and accessibility.</p>
-                                    <p>Key topics covered:</p>
-                                    <ul>
-                                        <li>Modern JavaScript frameworks</li>
-                                        <li>Performance optimization techniques</li>
-                                        <li>Web accessibility standards</li>
-                                        <li>Responsive design principles</li>
-                                    </ul>
-                                    <p>The presentation was well-received with over 200 attendees and sparked engaging discussions on best practices in the industry.</p>
-                                </div>
-                                <div class="seminar-tags">
-                                    <span class="tag">Web Dev</span>
-                                    <span class="tag">Performance</span>
-                                    <span class="tag">Accessibility</span>
-                                </div>
+                        <div class="file">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">cybersecurity_basics.txt</span>
+                            <div class="file-content">
+                                <h3>Cybersecurity Fundamentals</h3>
+                                <p><strong>Date:</strong> November 2023</p>
+                                <p><strong>Role:</strong> Attendee</p>
+                                <p><strong>Description:</strong> Explored essential cybersecurity concepts and practices for securing web applications and protecting user data.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="line">-----------------------------------------</div>
+                <div class="line">
+                    <p>Type <span class="command">cd ~</span> to return to homepage or navigate to other sections:</p>
+                    <ul class="command-list">
+                        <li><span class="command">cd ~/innovation</span> - Explore innovation routes</li>
+                        <li><span class="command">cd ~/hackathon</span> - See hackathon projects</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="status-bar">
-                <div class="status-item">4 items</div>
-                <div class="status-item">867 MB free of 4.00 GB</div>
+            <div class="prompt-line">
+                <span class="prompt">user@portfolio:~/seminars$</span>
+                <input type="text" id="command-input" autofocus>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

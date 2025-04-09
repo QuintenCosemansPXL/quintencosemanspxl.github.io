@@ -3,125 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QC Portfolio</title>
-    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <title>~/portfolio</title>
+    <link rel="icon" type="image/ico" href="images/terminal.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="desktop">
-        <div class="icons">
-            <div class="desktop-icon" onclick="location.href='index.html'">
-                <div class="icon-img home-icon"></div>
-                <span>Home</span>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
             </div>
-            <div class="desktop-icon" onclick="location.href='seminars.html'">
-                <div class="icon-img seminars-icon"></div>
-                <span>Seminars</span>
-            </div>
-            <div class="desktop-icon" onclick="location.href='innovation.html'">
-                <div class="icon-img innovation-icon"></div>
-                <span>Innovation</span>
-            </div>
-            <div class="desktop-icon" onclick="location.href='hackathon.html'">
-                <div class="icon-img hackathon-icon"></div>
-                <span>Hackathons</span>
-            </div>
+            <div class="terminal-title">user@portfolio:~</div>
         </div>
-
-        <div class="window">
-            <div class="window-header">
-                <div class="title-bar">
-                    <div class="title-bar-text">Home - My Portfolio</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
+        <div class="terminal-content">
+            <div id="output">
+                <div class="line">Welcome to Portfolio OS v1.0.0</div>
+                <div class="line">Type 'help' to see available commands.</div>
+                <div class="line">Last login: <span id="last-login"></span></div>
+                <div class="line">-----------------------------------------</div>
+                <div class="line with-image" id="intro-section">
+                    <div class="ascii-art">
+                        <pre>
+ _____           _    __       _ _       
+|  _  |___ ___ _| |  |  _|___ | |_|___ 
+|   __|  _| . | . |  |  _| . || | | . |
+|__|  |_| |___|___|  |_| |___||_|_|___|
+                                        
+                        </pre>
+                    </div>
+                    <div class="section-content">
+                        <h2>~/about_me</h2>
+                        <p>Hello! I'm a developer passionate about creating innovative solutions.</p>
+                        <p>This portfolio showcases my projects, seminars, and hackathon experiences.</p>
+                        <p>Navigate through the sections using the commands below.</p>
+                    </div>
+                    <div class="terminal-image">
+                        <img src="/placeholder.svg?height=300&width=300" alt="Profile Picture">
+                        <div class="terminal-image-caption">user@portfolio ~ $ cat profile.jpg</div>
                     </div>
                 </div>
-                <div class="menu-bar">
-                    <div class="menu-item">File</div>
-                    <div class="menu-item">Edit</div>
-                    <div class="menu-item">View</div>
-                    <div class="menu-item">Help</div>
-                </div>
-                <div class="address-bar">
-                    <span>Address:</span>
-                    <div class="address-path">C:\Portfolio\Home</div>
-                </div>
-            </div>
-
-            <div class="window-content">
-                <div class="sidebar">
-                    <div class="sidebar-header">Portfolio Sections</div>
-                    <div class="sidebar-item active">
-                        <div class="folder-icon"></div>
-                        <span>Home</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='seminars.html'">
-                        <div class="folder-icon"></div>
-                        <span>Seminars</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='innovation.html'">
-                        <div class="folder-icon"></div>
-                        <span>Innovation Routes</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='hackathon.html'">
-                        <div class="folder-icon"></div>
-                        <span>Hackathons</span>
-                    </div>
-                </div>
-
-                <div class="content-area">
-                    <div class="folder-view">
-                        <div class="file-item about-file">
-                            <div class="file-icon text-file"></div>
-                            <span>About Me.txt</span>
-                        </div>
-                        <div class="file-item skills-file">
-                            <div class="file-icon text-file"></div>
-                            <span>My Skills.txt</span>
-                        </div>
-                        <div class="file-item projects-file">
-                            <div class="file-icon folder-file"></div>
-                            <span>Projects</span>
-                        </div>
-                        <div class="file-item contact-file">
-                            <div class="file-icon contact-file-icon"></div>
-                            <span>Contact.vcf</span>
-                        </div>
-                    </div>
-
-                    <div class="file-preview" id="file-preview">
-                        <div class="preview-header">
-                            <div class="preview-title">About Me.txt</div>
-                            <button class="close-preview">×</button>
-                        </div>
-                        <div class="preview-content">
-                            <div class="about-content">
-                                <div class="profile-section">
-                                    <img src="/placeholder.svg?height=150&width=150" alt="Profile Picture" class="profile-pic">
-                                    <h2>Your Name</h2>
-                                    <p class="profile-title">Software Developer</p>
-                                </div>
-                                <div class="about-text">
-                                    <p>Hello! I'm a passionate developer with expertise in various technologies.</p>
-                                    <p>Welcome to my personal portfolio website where I showcase my projects, experiences, and professional journey.</p>
-                                    <p>Feel free to explore and learn more about my work!</p>
-                                    <p>This portfolio is designed in the style of Windows Explorer to showcase my creativity and attention to detail.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="line">-----------------------------------------</div>
+                <div class="line">
+                    <h2>~/navigation</h2>
+                    <p>Type these commands to navigate:</p>
+                    <ul class="command-list">
+                        <li><span class="command">cd seminars</span> - View seminars I've attended/presented</li>
+                        <li><span class="command">cd innovation</span> - Explore innovation routes</li>
+                        <li><span class="command">cd hackathon</span> - See hackathon projects</li>
+                        <li><span class="command">cd ~</span> - Return to homepage</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="status-bar">
-                <div class="status-item">4 items</div>
-                <div class="status-item">867 MB free of 4.00 GB</div>
+            <div class="prompt-line">
+                <span class="prompt">user@portfolio:~$</span>
+                <input type="text" id="command-input" autofocus>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

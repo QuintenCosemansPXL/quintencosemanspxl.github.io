@@ -3,137 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovation Routes - Windows Explorer</title>
+    <title>~/innovation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="desktop">
-        <div class="icons">
-            <div class="desktop-icon" onclick="location.href='index.html'">
-                <div class="icon-img home-icon"></div>
-                <span>Home</span>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
             </div>
-            <div class="desktop-icon" onclick="location.href='seminars.html'">
-                <div class="icon-img seminars-icon"></div>
-                <span>Seminars</span>
-            </div>
-            <div class="desktop-icon" onclick="location.href='innovation.html'">
-                <div class="icon-img innovation-icon"></div>
-                <span>Innovation</span>
-            </div>
-            <div class="desktop-icon" onclick="location.href='hackathon.html'">
-                <div class="icon-img hackathon-icon"></div>
-                <span>Hackathons</span>
-            </div>
+            <div class="terminal-title">user@portfolio:~/innovation</div>
         </div>
-
-        <div class="window">
-            <div class="window-header">
-                <div class="title-bar">
-                    <div class="title-bar-text">Innovation Routes - My Portfolio</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="menu-bar">
-                    <div class="menu-item">File</div>
-                    <div class="menu-item">Edit</div>
-                    <div class="menu-item">View</div>
-                    <div class="menu-item">Help</div>
-                </div>
-                <div class="address-bar">
-                    <span>Address:</span>
-                    <div class="address-path">C:\Portfolio\Innovation</div>
-                </div>
-            </div>
-
-            <div class="window-content">
-                <div class="sidebar">
-                    <div class="sidebar-header">Portfolio Sections</div>
-                    <div class="sidebar-item" onclick="location.href='index.html'">
-                        <div class="folder-icon"></div>
-                        <span>Home</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='seminars.html'">
-                        <div class="folder-icon"></div>
-                        <span>Seminars</span>
-                    </div>
-                    <div class="sidebar-item active">
-                        <div class="folder-icon"></div>
-                        <span>Innovation Routes</span>
-                    </div>
-                    <div class="sidebar-item" onclick="location.href='hackathon.html'">
-                        <div class="folder-icon"></div>
-                        <span>Hackathons</span>
-                    </div>
-                </div>
-
-                <div class="content-area">
-                    <div class="folder-view">
-                        <div class="file-item innovation-ai">
-                            <div class="file-icon folder-file"></div>
-                            <span>AI-Code-Assistant</span>
+        <div class="terminal-content">
+            <div id="output">
+                <div class="line">Current directory: ~/innovation</div>
+                <div class="line">-----------------------------------------</div>
+                <div class="line">
+                    <h2>~/innovation/routes</h2>
+                    <div class="folder-list">
+                        <div class="folder with-image">
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">ai_powered_education</span>
+                            <div class="folder-content">
+                                <h3>AI-Powered Education Platform</h3>
+                                <p><strong>Status:</strong> In Development</p>
+                                <p><strong>Description:</strong> A platform that uses AI to personalize learning experiences for students, adapting content based on individual learning styles and progress.</p>
+                                <p><strong>Technologies:</strong> Python, TensorFlow, React, Node.js</p>
+                            </div>
+                            <div class="terminal-image">
+                                <img src="/placeholder.svg?height=200&width=300" alt="AI Education Platform">
+                                <div class="terminal-image-caption">ai_education_demo.png</div>
+                            </div>
                         </div>
-                        <div class="file-item innovation-blockchain">
-                            <div class="file-icon folder-file"></div>
-                            <span>Blockchain-Supply-Chain</span>
+                        <div class="folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">sustainable_tech</span>
+                            <div class="folder-content">
+                                <h3>Sustainable Technology Initiative</h3>
+                                <p><strong>Status:</strong> Completed</p>
+                                <p><strong>Description:</strong> Developed energy-efficient algorithms and practices for reducing the carbon footprint of web applications and services.</p>
+                                <p><strong>Technologies:</strong> JavaScript, Performance Optimization Tools, Green Hosting</p>
+                            </div>
                         </div>
-                        <div class="file-item innovation-iot">
-                            <div class="file-icon folder-file"></div>
-                            <span>IoT-Smart-Home</span>
-                        </div>
-                        <div class="file-item innovation-approach">
-                            <div class="file-icon text-file"></div>
-                            <span>Innovation-Approach.txt</span>
-                        </div>
-                    </div>
-
-                    <div class="file-preview" id="file-preview">
-                        <div class="preview-header">
-                            <div class="preview-title">AI-Code-Assistant</div>
-                            <button class="close-preview">×</button>
-                        </div>
-                        <div class="preview-content">
-                            <div class="innovation-content">
-                                <h2>AI-Powered Code Assistant</h2>
-                                <div class="innovation-image">
-                                    <div class="placeholder-image"></div>
-                                </div>
-                                <div class="innovation-details">
-                                    <p><strong>Duration:</strong> 6 months</p>
-                                    <p><strong>Team Size:</strong> 4 developers</p>
-                                    <p><strong>Technologies:</strong> Python, TensorFlow, NLP</p>
-                                </div>
-                                <div class="innovation-description">
-                                    <p>Developed a machine learning model to assist developers with code completion and bug detection, improving productivity by 30%.</p>
-                                    <p>Key achievements:</p>
-                                    <ul>
-                                        <li>Trained the model on over 1 million code samples</li>
-                                        <li>Implemented real-time code analysis</li>
-                                        <li>Integrated with popular IDEs</li>
-                                        <li>Reduced debugging time by 25%</li>
-                                    </ul>
-                                    <p>The project was featured in a tech conference and is now being used by over 500 developers in our organization.</p>
-                                </div>
-                                <div class="innovation-buttons">
-                                    <button class="win-button">View Demo</button>
-                                    <button class="win-button">GitHub Repo</button>
-                                </div>
+                        <div class="folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">blockchain_for_good</span>
+                            <div class="folder-content">
+                                <h3>Blockchain for Social Impact</h3>
+                                <p><strong>Status:</strong> Planning Phase</p>
+                                <p><strong>Description:</strong> Exploring how blockchain technology can be used to address social challenges, including transparent charity donations and fair trade verification.</p>
+                                <p><strong>Technologies:</strong> Ethereum, Solidity, Web3.js</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="line">-----------------------------------------</div>
+                <div class="line">
+                    <p>Type <span class="command">cd ~</span> to return to homepage or navigate to other sections:</p>
+                    <ul class="command-list">
+                        <li><span class="command">cd ~/seminars</span> - View seminars</li>
+                        <li><span class="command">cd~/hackathon</span> - See hackathon projects</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="status-bar">
-                <div class="status-item">4 items</div>
-                <div class="status-item">867 MB free of 4.00 GB</div>
+            <div class="prompt-line">
+                <span class="prompt">user@portfolio:~/innovation$</span>
+                <input type="text" id="command-input" autofocus>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
