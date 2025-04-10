@@ -244,16 +244,18 @@ li {
   border-radius: 5px;
   padding: 5px;
   background-color: #111;
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: sticky;
+  top: 15px;
+  float: right;
   width: 35%;
   max-width: 300px;
+  margin-left: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .terminal-image::before {
-  content: "image.jpg";
+  content: "profile_pic.jpg";
   position: absolute;
   top: -20px;
   left: 10px;
@@ -284,8 +286,8 @@ li {
 
 /* For sections with images, add more padding to the right */
 .with-image {
-  padding-right: 40%;
-  min-height: 200px;
+  display: flow-root;
+  min-height: 100px;
 }
 
 /* Add a scanline effect to images for retro feel */

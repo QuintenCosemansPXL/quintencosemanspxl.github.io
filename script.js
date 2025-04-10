@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const terminalContent = document.querySelector(".terminal-content");
+  if (terminalContent) {
+    terminalContent.scrollTop = 0;
+  }
+
   // Set last login date
   const now = new Date()
   now.setHours(now.getHours() + 2)
@@ -58,12 +63,28 @@ document.addEventListener("DOMContentLoaded", () => {
                         <li><span class="command">cd ~</span> - Return to homepage</li>
                         <li><span class="command">clear</span> - Clear the terminal</li>
                         <li><span class="command">ls</span> - List contents of current directory</li>
-                        <li><span class="command">whoami</span> - Display user information</li>
+                        <li><span class="command">whoami</span> - Display my information</li>
                         <li><span class="command">date</span> - Display current date and time</li>
                     </ul>
                 `
         break
 
+      case "cat about_me.txt":
+        responseLine.innerHTML = `
+                    <p>Hello! I'm a developer passionate about creating innovative solutions.</p>
+                    <p>This portfolio showcases my projects, seminars, and hackathon experiences.</p>
+                    <p>Navigate through the sections using the commands below.</p>
+                `
+        break
+
+      case "cat profile_pic.jpg":
+        responseLine.innerHTML = `
+        <div class="terminal-output-image">
+          <img src="/images/image.png" alt="Profile Picture" style="max-width: 300px; margin: 10px 0; display: block;">
+        </div>
+          `
+        break
+        
       case "cd seminars":
         window.location.href = "seminars.html"
         return
@@ -95,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><span style="color: #27c93f;">innovation/</span></li>
                             <li><span style="color: #27c93f;">hackathon/</span></li>
                             <li><span style="color: #ffbd2e;">about_me.txt</span></li>
+                            <li><span style="color: #ffbd2e;">profile_pic.jpg</span></li>
                         </ul>
                     `
         } else if (currentPath === "seminars.html") {
@@ -126,9 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       case "whoami":
         responseLine.innerHTML = `
-        <p><img src="/images/email.png" alt="Email">: fake@example.com<a href="mailto:fake@example.com"></a></p>
-        <p>💼: <a href="https://www.linkedin.com/in/fakeuser" target="_blank">fakeuser</a></p>
-        <p>🐙: <a href="https://github.com/fakeuser" target="_blank">fakeuser</a></p>
+        <p><img src="/images/email.png" style="height: 16px; vertical-align: middle;">: <a href="mailto:quinten.cosemans@student.pxl.be" style="color: inherit; text-decoration: underline;"> quinten.cosemans@student.pxl.be</a></p>
+        <p><img src="/images/linkedin.png" style="height: 16px; vertical-align: middle;">: <a href="https://www.linkedin.com/in/quintencosemans" target="_blank" style="color: inherit; text-decoration: underline;">quintencosemans</a></p>
+        <p><img src="/images/github.png" style="height: 16px; vertical-align: middle;">: <a href="https://github.com/QuintenCosemansPXL" target="_blank" style="color: inherit; text-decoration: underline;">QuintenCosemansPXL</a></p>
         `
         break
 
