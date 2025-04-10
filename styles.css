@@ -40,12 +40,26 @@ body {
   align-items: center;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  position: relative; /* Keep this for the absolute positioning */
 }
 
 .terminal-buttons {
   display: flex;
   gap: 8px;
-  margin-right: 15px;
+  margin-right: 0; /* Remove right margin */
+  margin-left: auto; /* Push buttons to the right */
+  z-index: 2; /* Ensure buttons are clickable */
+}
+
+.terminal-title {
+  color: #ddd;
+  font-size: 14px;
+  position: absolute; /* Position absolutely within the header */
+  left: 0;
+  right: 0;
+  text-align: center; /* Center the text */
+  z-index: 1; /* Lower z-index than buttons */
+  width: 100%; /* Full width */
 }
 
 .terminal-button {
@@ -75,13 +89,6 @@ body {
 
 .close:hover, .minimize:hover, .maximize:hover {
   background-color: #f05922;
-}
-
-.terminal-title {
-  color: #ddd;
-  font-size: 14px;
-  flex-grow: 1;
-  text-align: center;
 }
 
 .terminal-content {

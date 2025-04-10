@@ -129,9 +129,46 @@ document.addEventListener("DOMContentLoaded", () => {
         return
 
       case "clear":
+        // Clear the output
         while (output.firstChild) {
           output.removeChild(output.firstChild)
         }
+        
+        // Hide the prompt line during the animation
+        const promptLine = document.querySelector(".prompt-line")
+        promptLine.style.display = "none"
+        const promptElement = document.createElement("div")
+        promptElement.className = "line"
+        promptElement.innerHTML = "<p>quintenc@portfolio:~$ <span class='cursor'>|</span></p>"
+        // Add style for the blinking cursor
+        const style = document.createElement('style')
+        style.textContent = `
+          .cursor {
+            animation: blink 1s step-end infinite;
+          }
+          @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+          }
+        `
+        document.head.appendChild(style)
+        output.appendChild(promptElement)
+        // Display first part of message after 700ms
+        setTimeout(() => {
+          const messageElement = document.createElement("div")
+          messageElement.className = "line"
+          messageElement.innerHTML = "<ul><p style='color:rgb(255, 0, 0);'>You just destroyed my website...</p></ul>"
+          output.appendChild(messageElement)
+          
+          setTimeout(() => {
+            messageElement.innerHTML = "<ul><p style='color: #27c93f;'>You just destroyed my website... sike</p></ul>"
+            
+            setTimeout(() => {
+              window.location.href = "index.html"
+            }, 1100)
+          }, 2500)
+        }, 2000)
+        
         return
 
       case "ls":
@@ -192,14 +229,23 @@ document.addEventListener("DOMContentLoaded", () => {
       case "date":
         const date = new Date()
         date.setHours(date.getHours() + 2)
-        responseLine.innerHTML = `<p>${date.toUTCString().replace('GMT', 'GMT+2')}</p>`
+        responseLine.innerHTML = `
+                      <ul>
+                          <p style="color: #27c93f;" >${date.toUTCString().replace('GMT', 'GMT+2')}</p>
+                      </ul>
+                  `        
         break
 
       default:
         if (command === "") {
           return
         }
-        responseLine.innerHTML = `<p>Command not found: '${command}' - Type 'help' to see available commands.</p>`
+        responseLine.innerHTML = `
+                      <ul>
+                          <p style="color: #27c93f;" >Command not found: '${command}'</p>
+                          <p style="color: #27c93f;" >Type 'help' to see available commands.</p>
+                      </ul>
+                  `
     }
 
     output.appendChild(responseLine)
