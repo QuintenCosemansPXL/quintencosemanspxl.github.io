@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const terminalContent = document.querySelector(".terminal-content");
-  if (terminalContent) {
-    terminalContent.scrollTop = 0;
-  }
-
   // Set last login date
   const now = new Date()
   now.setHours(now.getHours() + 2)
@@ -13,6 +8,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const commandInput = document.getElementById("command-input")
   const output = document.getElementById("output")
   const promptSpan = document.querySelector(".prompt")
+  const terminalContent = document.querySelector(".terminal-content")
+  const terminal = document.querySelector(".terminal")
+
+  // Ensure we start at the top of the terminal
+  terminalContent.scrollTop = 0
+
+  // Set up terminal window buttons
+  const closeButton = document.querySelector(".terminal-button.close")
+  const minimizeButton = document.querySelector(".terminal-button.minimize")
+  const maximizeButton = document.querySelector(".terminal-button.maximize")
+
+  // Store original terminal dimensions
+  const originalWidth = terminal.style.width || "90%"
+  const originalHeight = terminal.style.height || "85vh"
+  const originalMaxWidth = terminal.style.maxWidth || "900px"
+
+  // Flag to track if terminal is maximized
+  let isMaximized = false
+
+  // Close button - show popup
+  closeButton.addEventListener("click", () => {
+    alert("Just close the site 😉")
+  })
+
+  // Minimize button - return to original size
+  minimizeButton.addEventListener("click", () => {
+    terminal.style.width = originalWidth
+    terminal.style.height = originalHeight
+    terminal.style.maxWidth = originalMaxWidth
+    isMaximized = false
+  })
+
+  // Maximize button - expand to full viewport
+  maximizeButton.addEventListener("click", () => {
+    if (!isMaximized) {
+      terminal.style.width = "95%"
+      terminal.style.height = "95vh"
+      terminal.style.maxWidth = "none"
+      isMaximized = true
+    } else {
+      terminal.style.width = originalWidth
+      terminal.style.height = originalHeight
+      terminal.style.maxWidth = originalMaxWidth
+      isMaximized = false
+    }
+  })
 
   // Set focus to command input
   commandInput.focus()
@@ -164,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (command === "") {
           return
         }
-        responseLine.innerHTML = `<p>Command not found: ${command}. Type 'help' to see available commands.</p>`
+        responseLine.innerHTML = `<p>Command not found: '${command}' - Type 'help' to see available commands.</p>`
     }
 
     output.appendChild(responseLine)
