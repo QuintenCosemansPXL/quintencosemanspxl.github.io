@@ -49,21 +49,32 @@ body {
 }
 
 .terminal-button {
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
+  background-size: 50%; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  cursor: pointer;
 }
 
 .close {
-  background-color: #ff5f56;
+  background-color: #656565;
+  background-image: url("images/close.png");
 }
 
 .minimize {
-  background-color: #ffbd2e;
+  background-color: #656565;
+  background-image: url("images/minus.png");
 }
 
 .maximize {
-  background-color: #27c93f;
+  background-color: #656565;
+  background-image: url("images/rectangle.png");
+}
+
+.close:hover, .minimize:hover, .maximize:hover {
+  background-color: #f05922;
 }
 
 .terminal-title {

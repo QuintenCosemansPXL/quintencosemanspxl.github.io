@@ -19,14 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const minimizeButton = document.querySelector(".terminal-button.minimize")
   const maximizeButton = document.querySelector(".terminal-button.maximize")
 
-  // Store original terminal dimensions
-  const originalWidth = terminal.style.width || "90%"
-  const originalHeight = terminal.style.height || "85vh"
-  const originalMaxWidth = terminal.style.maxWidth || "900px"
-
-  // Flag to track if terminal is maximized
-  let isMaximized = false
-
   // Close button - show popup
   closeButton.addEventListener("click", () => {
     alert("Just close the site 😉")
@@ -34,25 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Minimize button - return to original size
   minimizeButton.addEventListener("click", () => {
-    terminal.style.width = originalWidth
-    terminal.style.height = originalHeight
-    terminal.style.maxWidth = originalMaxWidth
-    isMaximized = false
+    terminal.style.width = "90%"
+    terminal.style.height = "85vh"
+    terminal.style.maxWidth = "1000px"
   })
 
   // Maximize button - expand to full viewport
   maximizeButton.addEventListener("click", () => {
-    if (!isMaximized) {
-      terminal.style.width = "95%"
-      terminal.style.height = "95vh"
-      terminal.style.maxWidth = "none"
-      isMaximized = true
-    } else {
-      terminal.style.width = originalWidth
-      terminal.style.height = originalHeight
-      terminal.style.maxWidth = originalMaxWidth
-      isMaximized = false
-    }
+    terminal.style.width = "95%"
+    terminal.style.height = "95vh"
+    terminal.style.maxWidth = "none"
   })
 
   // Set focus to command input
@@ -96,25 +79,28 @@ document.addEventListener("DOMContentLoaded", () => {
     switch (command) {
       case "help":
         responseLine.innerHTML = `
-                    <p>Available commands:</p>
+                    
                     <ul class="command-list">
-                        <li><span class="command">cd seminars</span> - View seminars</li>
-                        <li><span class="command">cd innovation</span> - Explore innovation routes</li>
-                        <li><span class="command">cd hackathon</span> - See hackathon projects</li>
-                        <li><span class="command">cd ~</span> - Return to homepage</li>
-                        <li><span class="command">clear</span> - Clear the terminal</li>
-                        <li><span class="command">ls</span> - List contents of current directory</li>
-                        <li><span class="command">whoami</span> - Display my information</li>
-                        <li><span class="command">date</span> - Display current date and time</li>
+                        <p style="color: #27c93f;">Available commands:</p>
+                        <li style="color: #27c93f;"><span class="command">cd seminars</span> - View seminars</li>
+                        <li style="color: #27c93f;"><span class="command">cd innovation</span> - Explore innovation routes</li>
+                        <li style="color: #27c93f;"><span class="command">cd hackathon</span> - See hackathon projects</li>
+                        <li style="color: #27c93f;"><span class="command">cd ~</span> - Return to homepage</li>
+                        <li style="color: #27c93f;"><span class="command">clear</span> - Clear the terminal</li>
+                        <li style="color: #27c93f;"><span class="command">ls</span> - List contents of current directory</li>
+                        <li style="color: #27c93f;"><span class="command">whoami</span> - Display my information</li>
+                        <li style="color: #27c93f;"><span class="command">date</span> - Display current date and time</li>
                     </ul>
                 `
         break
 
       case "cat about_me.txt":
         responseLine.innerHTML = `
-                    <p>Hello! I'm a developer passionate about creating innovative solutions.</p>
-                    <p>This portfolio showcases my projects, seminars, and hackathon experiences.</p>
-                    <p>Navigate through the sections using the commands below.</p>
+                    <ul>
+                        <p style="color: #27c93f;">Hello! I'm a developer passionate about creating innovative solutions.</p>
+                        <p style="color: #27c93f;">This portfolio showcases my projects, seminars, and hackathon experiences.</p>
+                        <p style="color: #27c93f;">Navigate through the sections using the commands below.</p>
+                    </ul>
                 `
         break
 
@@ -189,10 +175,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       case "whoami":
         responseLine.innerHTML = `
-        <p><img src="/images/email.png" style="height: 16px; vertical-align: middle;">: <a href="mailto:quinten.cosemans@student.pxl.be" style="color: inherit; text-decoration: underline;"> quinten.cosemans@student.pxl.be</a></p>
-        <p><img src="/images/linkedin.png" style="height: 16px; vertical-align: middle;">: <a href="https://www.linkedin.com/in/quintencosemans" target="_blank" style="color: inherit; text-decoration: underline;">quintencosemans</a></p>
-        <p><img src="/images/github.png" style="height: 16px; vertical-align: middle;">: <a href="https://github.com/QuintenCosemansPXL" target="_blank" style="color: inherit; text-decoration: underline;">QuintenCosemansPXL</a></p>
-        `
+                      <ul>
+                          <p>
+                            <img src="/images/email.png" style="height: 16px; vertical-align: middle;">: <a href="mailto:quinten.cosemans@student.pxl.be" style="color: inherit; text-decoration: underline;"> quinten.cosemans@student.pxl.be</a>
+                          </p>
+                          <p>
+                            <img src="/images/linkedin.png" style="height: 16px; vertical-align: middle;">: <a href="https://www.linkedin.com/in/quintencosemans" target="_blank" style="color: inherit; text-decoration: underline;">quintencosemans</a>
+                          </p>
+                          <p>
+                            <img src="/images/github.png" style="height: 16px; vertical-align: middle;">: <a href="https://github.com/QuintenCosemansPXL" target="_blank" style="color: inherit; text-decoration: underline;">QuintenCosemansPXL</a>
+                          </p>
+                      </ul>
+                  `
         break
 
       case "date":
