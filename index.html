@@ -10,7 +10,9 @@
 <body>
     <div class="terminal">
         <div class="terminal-header">
-            <div class="extra-close"></div>
+            <div class="terminal-buttons left-buttons">
+                <span class="terminal-button extra"></span>
+            </div>
             <div class="terminal-title">quintenc@portfolio:~</div>
             <div class="terminal-buttons">
                 <span class="terminal-button minimize"></span>
@@ -34,7 +36,6 @@
                     </pre>
                 </div>
                 <div class="line">Welcome to Portfolio_OS v3.1.0</div>
-                <div class="line">Type 'help' to see available commands.</div>
                 <div class="line">Last login: <span id="last-login"></span></div>
                 <div class="line">-----------------------------------------</div>
                 <div class="line with-image" id="intro-section">
@@ -48,7 +49,7 @@
                 <div class="line">-----------------------------------------</div>
                 <div class="line">
                     <h2>~/navigation</h2>
-                    <p>Type these commands to navigate:</p>
+                    <p>Type or click on these commands to navigate:</p>
                     <ul class="command-list">
                         <li><span class="command">cd seminars</span> - View seminars I've attended/presented</li>
                         <li><span class="command">cd innovation</span> - Explore innovation routes</li>
@@ -56,6 +57,7 @@
                         <li><span class="command">whoami</span> - Display my information</li>
                     </ul>
                 </div>
+                <div class="line">Type 'help' to see available commands.</div>
             </div>
             <div class="prompt-line">
                 <span class="prompt">quintenc@portfolio:~$</span>
