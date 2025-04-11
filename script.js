@@ -1,8 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Set last login date
+<<<<<<< HEAD
   const now = new Date()
   now.setHours(now.getHours() + 2)
   document.getElementById("last-login").textContent = now.toUTCString().replace("GMT", "GMT+2")
+=======
+  const lastLoginElement = document.getElementById("last-login")
+  if (lastLoginElement) {
+    const now = new Date()
+    now.setHours(now.getHours() + 2)
+    lastLoginElement.textContent = now.toUTCString().replace("GMT", "CET+1")
+  }
+>>>>>>> 6e18c06 (Refactor portfolio pages to unify titles, enhance terminal interface with new button for navigation, and update command instructions for clarity)
 
   // Get command input element
   const commandInput = document.getElementById("command-input")
