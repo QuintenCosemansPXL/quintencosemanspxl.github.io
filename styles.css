@@ -73,12 +73,17 @@ body {
 }
 
 .left-buttons {
-  margin-left: 10px;
+  width: 17px;
+  height: 17px;
+  margin-left: 0px;
   display: flex;
 }
 
-.close-left {
-  background-color: #ff5f56; /* Zelfde rode kleur als de normale sluitknop */
+.extra {
+  background-color: #656565;
+  background-image: url("images/tabExtra.png");
+  border-radius: 10%;
+  background-size: 60%;
 }
 
 .close {
@@ -96,7 +101,7 @@ body {
   background-image: url("images/rectangle.png");
 }
 
-.close:hover, .minimize:hover, .maximize:hover {
+.close:hover, .minimize:hover, .maximize:hover, .extra:hover {
   background-color: #f05922;
 }
 

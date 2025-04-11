@@ -18,10 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButton = document.querySelector(".terminal-button.close")
   const minimizeButton = document.querySelector(".terminal-button.minimize")
   const maximizeButton = document.querySelector(".terminal-button.maximize")
+  const extraButton = document.querySelector(".terminal-button.extra")
 
   // Close button - show popup
   closeButton.addEventListener("click", () => {
-    alert("Just close the site 😉")
+    alert("Just close the site ;)")
+  })
+
+  // Extra button - open in new tab
+  extraButton.addEventListener("click", () => {
+    window.open(window.location.href, '_blank')
   })
 
   // Minimize button - return to original size
