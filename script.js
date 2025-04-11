@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set last login date
   const now = new Date()
   now.setHours(now.getHours() + 2)
-  document.getElementById("last-login").textContent = now.toUTCString().replace("GMT", "GMT+2")
+  document.getElementById("last-login").textContent = now.toUTCString().replace("GMT", "CET+1")
 
   // Get command input element
   const commandInput = document.getElementById("command-input")
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `
         break
 
-      case "cat about_me.txt":
+      case "cat about.txt":
         responseLine.innerHTML = `
                     <ul>
                         <p style="color: #27c93f;">Hello! I'm a developer passionate about creating innovative solutions.</p>
@@ -103,6 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     </ul>
                 `
         break
+
+        case "nigger":
+          responseLine.innerHTML = `
+                      <ul>
+                          <p style="color: #27c93f;">Stop it Dietmar.</p>
+                      </ul>
+                  `
+          break
 
       case "cat profile_pic.jpg":
         responseLine.innerHTML = `
@@ -179,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><span style="color: #27c93f;">seminars/</span></li>
                             <li><span style="color: #27c93f;">innovation/</span></li>
                             <li><span style="color: #27c93f;">hackathon/</span></li>
-                            <li><span style="color: #ffbd2e;">about_me.txt</span></li>
+                            <li><span style="color: #ffbd2e;">about.txt</span></li>
                             <li><span style="color: #ffbd2e;">profile_pic.jpg</span></li>
                         </ul>
                     `
@@ -231,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
         date.setHours(date.getHours() + 2)
         responseLine.innerHTML = `
                       <ul>
-                          <p style="color: #27c93f;" >${date.toUTCString().replace('GMT', 'GMT+2')}</p>
+                          <p style="color: #27c93f;" >${date.toUTCString().replace('GMT', 'CET+1')}</p>
                       </ul>
                   `        
         break
