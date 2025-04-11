@@ -72,6 +72,15 @@ body {
   cursor: pointer;
 }
 
+.left-buttons {
+  margin-left: 10px;
+  display: flex;
+}
+
+.close-left {
+  background-color: #ff5f56; /* Zelfde rode kleur als de normale sluitknop */
+}
+
 .close {
   background-color: #656565;
   background-image: url("images/close.png");
