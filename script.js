@@ -214,14 +214,17 @@ document.addEventListener("DOMContentLoaded", () => {
         responseLine.innerHTML = `
                       <ul>
                           <p>
-                            <img src="/images/email.png" style="height: 16px; vertical-align: middle;">: <a href="mailto:quinten.cosemans@student.pxl.be" style="color: inherit; text-decoration: underline;"> quinten.cosemans@student.pxl.be</a>
+                            <img src="/images/email.png" style="height: 16px; vertical-align: middle;">: <a href="mailto:quinten.cosemans@student.pxl.be" style="color: inherit; text-decoration: none;"> quinten.cosemans@student.pxl.be</a>
                           </p>
                           <p>
-                            <img src="/images/linkedin.png" style="height: 16px; vertical-align: middle;">: <a href="https://www.linkedin.com/in/quintencosemans" target="_blank" style="color: inherit; text-decoration: underline;">quintencosemans</a>
+                            <img src="/images/linkedin.png" style="height: 16px; vertical-align: middle;">: <a href="https://www.linkedin.com/in/quintencosemans" target="_blank" style="color: inherit; text-decoration: none;">quintencosemans</a>
                           </p>
                           <p>
-                            <img src="/images/github.png" style="height: 16px; vertical-align: middle;">: <a href="https://github.com/QuintenCosemansPXL" target="_blank" style="color: inherit; text-decoration: underline;">QuintenCosemansPXL</a>
+                            <img src="/images/github.png" style="height: 16px; vertical-align: middle;">: <a href="https://github.com/QuintenCosemansPXL" target="_blank" style="color: inherit; text-decoration: none;">QuintenCosemansPXL</a>
                           </p>
+                          <p>
+                            <img src="/images/cv-better.png" style="height: 16px; vertical-align: middle;">: <a href="/Resume_QuintenCosemans.pdf" target="_blank" style="color: inherit; text-decoration: none;">Resume</a>
+                          </p>                          
                       </ul>
                   `
         break
