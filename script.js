@@ -1,17 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Set last login date
-<<<<<<< HEAD
-  const now = new Date()
-  now.setHours(now.getHours() + 2)
-  document.getElementById("last-login").textContent = now.toUTCString().replace("GMT", "GMT+2")
-=======
   const lastLoginElement = document.getElementById("last-login")
   if (lastLoginElement) {
     const now = new Date()
     now.setHours(now.getHours() + 2)
     lastLoginElement.textContent = now.toUTCString().replace("GMT", "CET+1")
   }
->>>>>>> 6e18c06 (Refactor portfolio pages to unify titles, enhance terminal interface with new button for navigation, and update command instructions for clarity)
 
   // Get command input element
   const commandInput = document.getElementById("command-input")
@@ -109,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `
         break
 
-      case "cat about_me.txt":
+      case "cat about.txt":
         responseLine.innerHTML = `
                     <ul>
                         <p style="color: #27c93f;">Hello! I'm a developer passionate about creating innovative solutions.</p>
@@ -194,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><span style="color: #27c93f;">seminars/</span></li>
                             <li><span style="color: #27c93f;">innovation/</span></li>
                             <li><span style="color: #27c93f;">hackathon/</span></li>
-                            <li><span style="color: #ffbd2e;">about_me.txt</span></li>
+                            <li><span style="color: #ffbd2e;">about.txt</span></li>
                             <li><span style="color: #ffbd2e;">profile_pic.jpg</span></li>
                         </ul>
                     `
@@ -249,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
         date.setHours(date.getHours() + 2)
         responseLine.innerHTML = `
                       <ul>
-                          <p style="color: #27c93f;" >${date.toUTCString().replace('GMT', 'GMT+2')}</p>
+                          <p style="color: #27c93f;" >${date.toUTCString().replace('GMT', 'CET+1')}</p>
                       </ul>
                   `        
         break
