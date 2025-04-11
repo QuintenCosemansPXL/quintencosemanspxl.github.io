@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Set last login date
-  const now = new Date()
-  now.setHours(now.getHours() + 2)
-  document.getElementById("last-login").textContent = now.toUTCString().replace("GMT", "CET+1")
+  const lastLoginElement = document.getElementById("last-login")
+  if (lastLoginElement) {
+    const now = new Date()
+    now.setHours(now.getHours() + 2)
+    lastLoginElement.textContent = now.toUTCString().replace("GMT", "CET+1")
+  }
 
   // Get command input element
   const commandInput = document.getElementById("command-input")
@@ -109,14 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     </ul>
                 `
         break
-
-        case "nigger":
-          responseLine.innerHTML = `
-                      <ul>
-                          <p style="color: #27c93f;">Stop it Dietmar.</p>
-                      </ul>
-                  `
-          break
 
       case "cat profile_pic.jpg":
         responseLine.innerHTML = `
