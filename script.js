@@ -106,9 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
       case "cat about.txt":
         responseLine.innerHTML = `
                     <ul>
-                        <p style="color: #27c93f;">Hello! I'm a developer passionate about creating innovative solutions.</p>
-                        <p style="color: #27c93f;">This portfolio showcases my projects, seminars, and hackathon experiences.</p>
-                        <p style="color: #27c93f;">Navigate through the sections using the commands below.</p>
+                        <p>Hi! I'm Quinten, a student with a passion for automation and innovation.</p>
+                        <p>Currently interning at Cegeka as a System Engineer Linux. In my free time I play handball, hang out with my friends and explore the world a bit :)</p>
+                        <p>This portfolio showcases my projects, seminars, and hackathon experiences.</p>
                     </ul>
                 `
         break
