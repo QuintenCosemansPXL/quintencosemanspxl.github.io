@@ -33,6 +33,16 @@ body {
   flex-direction: column;
 }
 
+.home-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
 .terminal-header {
   background-color: #333;
   padding: 8px 15px;

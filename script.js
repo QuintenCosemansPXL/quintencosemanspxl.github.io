@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p style="color: #27c93f;">Available commands:</p>
                         <li style="color: #27c93f;"><span class="command">cd seminars</span> - View seminars</li>
                         <li style="color: #27c93f;"><span class="command">cd innovation</span> - Explore innovation routes</li>
-                        <li style="color: #27c93f;"><span class="command">cd hackathon</span> - See hackathon projects</li>
+                        <li style="color: #27c93f;"><span class="command">cd personal-dev</span> - See my personal development sessions</li>
                         <li style="color: #27c93f;"><span class="command">cd ~</span> - Return to homepage</li>
                         <li style="color: #27c93f;"><span class="command">clear</span> - Clear the terminal</li>
                         <li style="color: #27c93f;"><span class="command">ls</span> - List contents of current directory</li>
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <ul>
                         <p>Hi! I'm Quinten, a student with a passion for automation and innovation.</p>
                         <p>Currently interning at Cegeka as a System Engineer Linux. In my free time I play handball, hang out with my friends and explore the world a bit :)</p>
-                        <p>This portfolio showcases my projects, seminars, and hackathon experiences.</p>
+                        <p>This portfolio showcases my seminars, innovation and personal development experiences.</p>
                     </ul>
                 `
         break
@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "innovation.html"
         return
 
-      case "cd hackathon":
-        window.location.href = "hackathon.html"
+      case "cd personal-dev":
+        window.location.href = "personal.html"
         return
 
       case "cd ~":
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <ul>
                             <li><span style="color: #27c93f;">seminars/</span></li>
                             <li><span style="color: #27c93f;">innovation/</span></li>
-                            <li><span style="color: #27c93f;">hackathon/</span></li>
+                            <li><span style="color: #27c93f;">personal-dev/</span></li>
                             <li><span style="color: #ffbd2e;">about.txt</span></li>
                             <li><span style="color: #ffbd2e;">profile_pic.jpg</span></li>
                         </ul>
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><span style="color: #27c93f;">blockchain_for_good/</span></li>
                         </ul>
                     `
-        } else if (currentPath === "hackathon.html") {
+        } else if (currentPath === "personal.html") {
           responseLine.innerHTML = `
                         <ul>
                             <li><span style="color: #ffbd2e;">EcoTrack.project</span></li>
