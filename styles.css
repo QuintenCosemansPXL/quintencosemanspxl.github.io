@@ -50,26 +50,26 @@ body {
   align-items: center;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  position: relative; /* Keep this for the absolute positioning */
+  position: relative; 
 }
 
 .terminal-buttons {
   display: flex;
   gap: 8px;
-  margin-right: 0; /* Remove right margin */
-  margin-left: auto; /* Push buttons to the right */
-  z-index: 2; /* Ensure buttons are clickable */
+  margin-right: 0; 
+  margin-left: auto; 
+  z-index: 2; 
 }
 
 .terminal-title {
   color: #ddd;
   font-size: 14px;
-  position: absolute; /* Position absolutely within the header */
+  position: absolute; 
   left: 0;
   right: 0;
-  text-align: center; /* Center the text */
-  z-index: 1; /* Lower z-index than buttons */
-  width: 100%; /* Full width */
+  text-align: center; 
+  z-index: 1; 
+  width: 100%; 
 }
 
 .terminal-button {
@@ -130,7 +130,7 @@ body {
 
 .line {
   margin-bottom: 15px;
-  position: relative; /* For absolute positioning of images */
+  position: relative; 
 }
 
 .prompt-line {
@@ -154,7 +154,6 @@ body {
   caret-color: #33ff33;
 }
 
-/* Content Styling */
 h2 {
   color: #ffbd2e;
   margin-bottom: 10px;
@@ -190,7 +189,7 @@ li {
 
 .section-content {
   margin-left: 15px;
-  width: 90%; /* Make room for images on the right */
+  width: 90%; 
 }
 
 .skills-list li,
@@ -218,13 +217,13 @@ li {
   background-color: rgba(39, 201, 63, 0.2);
 }
 
-/* File System Styling */
+
 .file-list,
 .folder-list,
 .project-list {
   margin-left: 15px;
   margin-bottom: 15px;
-  width: 60%; /* Make room for images on the right */
+  width: 60%; 
 }
 
 .file,
@@ -235,7 +234,7 @@ li {
   border: 1px solid #333;
   border-radius: 5px;
   background-color: rgba(51, 51, 51, 0.3);
-  position: relative; /* For positioning images */
+  position: relative; 
 }
 
 .file-icon,
@@ -262,7 +261,7 @@ li {
 
 .folder-list.full-width,
 .file-list.full-width {
-  width: 95%; /* Use almost full width */
+  width: 95%; 
 }
 
 .full-width .terminal-image {
@@ -291,7 +290,6 @@ li {
   text-decoration: underline;
 }
 
-/* Terminal-style image frames positioned on the right */
 .terminal-image {
   border: 2px solid #333;
   border-radius: 5px;
@@ -308,12 +306,10 @@ li {
   overflow: hidden;;
 }
 
-/* Remove the general terminal-image::before pseudo-element */
 .terminal-image::before {
-  content: none; /* Remove the default label */
+  content: none; 
 }
 
-/* Add a profile-specific image class to index.html only */
 .profile-image::before {
   content: "profile_pic.jpg";
   position: absolute;
@@ -344,13 +340,11 @@ li {
   margin-top: 5px;
 }
 
-/* For sections with images, add more padding to the right */
 .with-image {
   display: flow-root;
   min-height: 100px;
 }
 
-/* Add a scanline effect to images for retro feel */
 .terminal-image::after {
   content: "";
   position: absolute;
@@ -373,16 +367,15 @@ li {
   color: #33ff33;
 }
 
-/* Terminal-style links */
 .terminal-link {
-  color: #33ff33; /* Same as terminal text */
+  color: #33ff33; 
   text-decoration: none;
   border-bottom: 1px dotted #33ff33;
   transition: color 0.2s, border-bottom 0.2s;
 }
 
 .terminal-link:hover {
-  color: #ffbd2e; /* Yellow highlight color */
+  color: #ffbd2e; 
   border-bottom: 1px solid #ffbd2e;
 }
 
