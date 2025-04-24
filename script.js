@@ -134,6 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return
 
       case "cd ~":
+      case "cd":
+        window.location.href = "index.html"
+        return
         window.location.href = "index.html"
         return
 
