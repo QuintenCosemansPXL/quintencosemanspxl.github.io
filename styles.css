@@ -260,6 +260,16 @@ li {
   border-top: 1px dashed #333;
 }
 
+.folder-list.full-width,
+.file-list.full-width {
+  width: 95%; /* Use almost full width */
+}
+
+.full-width .terminal-image {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
 .project-header {
   display: flex;
   align-items: center;
@@ -295,9 +305,16 @@ li {
   margin-left: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
+  overflow: hidden;;
 }
 
+/* Remove the general terminal-image::before pseudo-element */
 .terminal-image::before {
+  content: none; /* Remove the default label */
+}
+
+/* Add a profile-specific image class to index.html only */
+.profile-image::before {
   content: "profile_pic.jpg";
   position: absolute;
   top: -20px;
@@ -347,7 +364,6 @@ li {
   z-index: 1;
 }
 
-/* Add a glowing effect on hover */
 .terminal-image:hover {
   border-color: #33ff33;
   box-shadow: 0 0 15px rgba(51, 255, 51, 0.3);
@@ -357,7 +373,19 @@ li {
   color: #33ff33;
 }
 
-/* Responsive Styles */
+/* Terminal-style links */
+.terminal-link {
+  color: #33ff33; /* Same as terminal text */
+  text-decoration: none;
+  border-bottom: 1px dotted #33ff33;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.terminal-link:hover {
+  color: #ffbd2e; /* Yellow highlight color */
+  border-bottom: 1px solid #ffbd2e;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 10px;
